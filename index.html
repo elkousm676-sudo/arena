@@ -1,0 +1,2667 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAWAB - High Converting Landing Pages | لاندينغ بيج محترفة</title>
+    <!-- Tailwind CSS v4 CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            red: '#FF2A2A',
+                            darkRed: '#B31E1E',
+                            black: '#000000',
+                            grayDark: '#121212',
+                            grayLight: '#1E1E1E',
+                            accent: '#FF4D4D',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #000000;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #000000;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #FF2A2A;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #B31E1E;
+        }
+        .glow-red {
+            box-shadow: 0 0 25px rgba(255, 42, 42, 0.35);
+        }
+        .text-glow {
+            text-shadow: 0 0 10px rgba(255, 42, 42, 0.5);
+        }
+        /* Animation transitions */
+        .transition-all-300 {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        /* Direction adjustments for RTL */
+        [dir="rtl"] .rtl-flip {
+            transform: scaleX(-1);
+        }
+    </style>
+</head>
+<body class="selection:bg-brand-red selection:text-white" id="main-body" dir="ltr">
+
+    <!-- TOP ANNOUNCEMENT BAR -->
+    <div class="bg-brand-red text-white py-2 px-4 text-center text-xs font-bold tracking-wider uppercase flex justify-center items-center gap-2">
+        <span class="animate-ping inline-flex h-2.5 w-2.5 rounded-full bg-white opacity-75"></span>
+        <span id="announcement-text">🔥 Ramadan & E-commerce Special Offer: 30% OFF on all packages!</span>
+    </div>
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-black/85 border-b border-white/10 transition-all-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 bg-brand-red rounded-lg flex items-center justify-center font-black text-xl text-white transform group-hover:rotate-12 transition-all-300 shadow-lg shadow-brand-red/30">
+                    S
+                </div>
+                <div>
+                    <span class="text-2xl font-black tracking-tight text-white group-hover:text-brand-red transition-all-300">SAWAB</span>
+                    <span class="block text-[9px] text-zinc-400 tracking-widest uppercase font-bold" id="logo-subtitle">CONVERSION AGENCY</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-semibold tracking-wide">
+                <a href="#features" class="hover:text-brand-red text-zinc-300 transition-all-300" id="nav-features">Features</a>
+                <a href="#simulator" class="hover:text-brand-red text-zinc-300 transition-all-300" id="nav-simulator">Live Simulator</a>
+                <a href="#calculator" class="hover:text-brand-red text-zinc-300 transition-all-300" id="nav-calculator">ROI Calculator</a>
+                <a href="#pricing" class="hover:text-brand-red text-zinc-300 transition-all-300" id="nav-pricing">Pricing</a>
+                <a href="#faq" class="hover:text-brand-red text-zinc-300 transition-all-300" id="nav-faq">FAQ</a>
+            </nav>
+
+            <!-- Right Controls: Language & CTA -->
+            <div class="flex items-center gap-4">
+                <!-- Language Selector Dropdown / Pills -->
+                <div class="bg-zinc-900 border border-white/10 p-1 rounded-full flex gap-1 text-xs font-bold">
+                    <button onclick="changeLanguage('ar')" id="lang-ar-btn" class="px-2.5 py-1 rounded-full transition-all-300 text-zinc-400 hover:text-white">عربي</button>
+                    <button onclick="changeLanguage('fr')" id="lang-fr-btn" class="px-2.5 py-1 rounded-full transition-all-300 text-zinc-400 hover:text-white">FR</button>
+                    <button onclick="changeLanguage('en')" id="lang-en-btn" class="px-2.5 py-1 rounded-full transition-all-300 bg-brand-red text-white">EN</button>
+                </div>
+
+                <!-- Admin Access Toggle Icon -->
+                <button onclick="openAdminModal()" class="p-2 text-zinc-400 hover:text-brand-red rounded-lg hover:bg-white/5 transition-all-300" title="Admin Leads Panel">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                </button>
+
+                <a href="#pricing" class="hidden sm:inline-flex bg-brand-red hover:bg-brand-darkRed text-white font-bold py-2 px-5 rounded-lg text-sm tracking-wide transition-all-300 transform hover:-translate-y-0.5 shadow-lg shadow-brand-red/20 hover:shadow-brand-red/40" id="nav-cta">
+                    Order Now
+                </a>
+
+                <!-- Mobile Menu Button -->
+                <button onclick="toggleMobileMenu()" class="md:hidden p-2 text-zinc-300 hover:text-white focus:outline-none">
+                    <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    <svg id="menu-icon-close" class="hidden w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-zinc-950 border-t border-white/10 px-4 py-6 space-y-4 animate-fadeIn">
+            <a href="#features" onclick="toggleMobileMenu()" class="block text-zinc-300 hover:text-brand-red text-base font-semibold" id="mob-features">Features</a>
+            <a href="#simulator" onclick="toggleMobileMenu()" class="block text-zinc-300 hover:text-brand-red text-base font-semibold" id="mob-simulator">Live Simulator</a>
+            <a href="#calculator" onclick="toggleMobileMenu()" class="block text-zinc-300 hover:text-brand-red text-base font-semibold" id="mob-calculator">ROI Calculator</a>
+            <a href="#pricing" onclick="toggleMobileMenu()" class="block text-zinc-300 hover:text-brand-red text-base font-semibold" id="mob-pricing">Pricing Plans</a>
+            <a href="#faq" onclick="toggleMobileMenu()" class="block text-zinc-300 hover:text-brand-red text-base font-semibold" id="mob-faq">FAQ</a>
+            <a href="#pricing" onclick="toggleMobileMenu()" class="block w-full text-center bg-brand-red hover:bg-brand-darkRed text-white font-bold py-3 px-4 rounded-lg text-sm transition-all-300" id="mob-cta">Order Now</a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden py-12 lg:py-20">
+        <!-- Background Radial Lights -->
+        <div class="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-brand-red/10 rounded-full blur-[100px] pointer-events-none"></div>
+        <div class="absolute bottom-1/4 right-1/4 translate-x-1/2 translate-y-1/2 w-96 h-96 bg-brand-red/15 rounded-full blur-[120px] pointer-events-none"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Hero Left Content -->
+                <div class="lg:col-span-7 space-y-8 text-center lg:text-left" id="hero-content-wrapper">
+                    <!-- High conversion badge -->
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-zinc-900 border border-brand-red/30 text-xs font-semibold text-brand-red animate-pulse mx-auto lg:mx-0">
+                        <span class="w-2 h-2 rounded-full bg-brand-red"></span>
+                        <span id="hero-badge-text">⚡ LIGHTNING-FAST CUSTOM CODED LANDING PAGES</span>
+                    </div>
+
+                    <!-- Main Catchy Title -->
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight" id="hero-title">
+                        We Build <span class="text-brand-red text-glow">Landing Pages</span> That Explode Your Sales.
+                    </h1>
+
+                    <!-- Description -->
+                    <p class="text-lg sm:text-xl text-zinc-400 max-w-2xl mx-auto lg:mx-0 font-light" id="hero-subtitle">
+                        Custom-coded from scratch using HTML, CSS, and JS. Zero bloated builders like Shopify or Elementor. Speed scores of 99% that convert visitors into buyers in milliseconds. Perfect for COD & E-commerce.
+                    </p>
+
+                    <!-- Interactive Fast Performance Indicators -->
+                    <div class="grid grid-cols-3 gap-4 max-w-md mx-auto lg:mx-0 py-2">
+                        <div class="bg-zinc-900/60 backdrop-blur border border-white/5 p-3.5 rounded-xl text-center">
+                            <div class="text-brand-red text-3xl font-extrabold tracking-tight" id="hero-stat-speed">&lt; 0.5s</div>
+                            <div class="text-[10px] text-zinc-500 uppercase tracking-wider mt-1 font-bold" id="hero-stat-speed-lbl">Load Time</div>
+                        </div>
+                        <div class="bg-zinc-900/60 backdrop-blur border border-white/5 p-3.5 rounded-xl text-center">
+                            <div class="text-white text-3xl font-extrabold tracking-tight" id="hero-stat-conversions">+250%</div>
+                            <div class="text-[10px] text-zinc-500 uppercase tracking-wider mt-1 font-bold" id="hero-stat-conversions-lbl">Conversion Rate</div>
+                        </div>
+                        <div class="bg-zinc-900/60 backdrop-blur border border-white/5 p-3.5 rounded-xl text-center">
+                            <div class="text-brand-red text-3xl font-extrabold tracking-tight">99%</div>
+                            <div class="text-[10px] text-zinc-500 uppercase tracking-wider mt-1 font-bold" id="hero-stat-score-lbl">Mobile Score</div>
+                        </div>
+                    </div>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#pricing" class="glow-red bg-brand-red hover:bg-brand-darkRed text-white text-base font-extrabold py-4 px-8 rounded-xl tracking-wide transition-all-300 transform hover:-translate-y-1 flex items-center justify-center gap-2 group shadow-xl shadow-brand-red/30" id="hero-cta-primary">
+                            <span>Get My Page Now</span>
+                            <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-all-300 rtl-flip" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                        <a href="#simulator" class="bg-zinc-900 border border-white/10 hover:border-brand-red text-white text-base font-bold py-4 px-8 rounded-xl tracking-wide transition-all-300 flex items-center justify-center gap-2" id="hero-cta-secondary">
+                            ⚡ Try Live Simulator
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Right: Live Interactive Speed Gauge Mockup -->
+                <div class="lg:col-span-5 relative">
+                    <!-- Decorative back shadow -->
+                    <div class="absolute -inset-1 rounded-2xl bg-gradient-to-r from-brand-red to-black opacity-25 blur-lg pointer-events-none"></div>
+                    
+                    <!-- Main Speed Gauge & Mockup Container -->
+                    <div class="relative bg-zinc-950 border border-white/10 rounded-2xl p-6 sm:p-8 shadow-2xl">
+                        <!-- Top status light bar -->
+                        <div class="flex items-center justify-between border-b border-white/5 pb-4 mb-6">
+                            <div class="flex gap-1.5">
+                                <span class="w-3 h-3 rounded-full bg-red-500"></span>
+                                <span class="w-3 h-3 rounded-full bg-yellow-500"></span>
+                                <span class="w-3 h-3 rounded-full bg-green-500"></span>
+                            </div>
+                            <div class="bg-zinc-900 border border-white/10 px-3 py-1 rounded text-[10px] text-zinc-400 font-mono tracking-tight" id="hero-mockup-url">
+                                sawab.agency/my-store
+                            </div>
+                        </div>
+
+                        <!-- Interactive Speedometer Display -->
+                        <div class="text-center py-6">
+                            <div class="relative inline-flex items-center justify-center">
+                                <!-- Circular progress ring simulation -->
+                                <svg class="w-40 h-40 transform -rotate-90">
+                                    <circle cx="80" cy="80" r="70" stroke="#18181b" stroke-width="8" fill="transparent"></circle>
+                                    <circle cx="80" cy="80" r="70" stroke="#FF2A2A" stroke-dasharray="440" stroke-dashoffset="15" stroke-width="10" fill="transparent" class="transition-all duration-1000 ease-out" id="gauge-circle"></circle>
+                                </svg>
+                                <!-- Score value center -->
+                                <div class="absolute flex flex-col items-center">
+                                    <span class="text-5xl font-black text-white text-glow" id="live-speed-score">99</span>
+                                    <span class="text-[9px] text-zinc-400 font-bold uppercase tracking-widest mt-1" id="live-speed-lbl">Performance Score</span>
+                                </div>
+                            </div>
+
+                            <p class="text-sm font-semibold text-zinc-300 mt-6 max-w-xs mx-auto" id="hero-gauge-desc">
+                                While standard builders take 4+ seconds to load, Sawab pages render instantly (0.3s) saving 90% of lost traffic!
+                            </p>
+                        </div>
+
+                        <!-- Real-time performance feed simulator -->
+                        <div class="bg-zinc-900/80 border border-white/5 rounded-xl p-4 mt-4 text-left font-mono text-xs space-y-2 text-zinc-400">
+                            <div class="flex items-center justify-between">
+                                <span id="log-speed-index">⚡ Speed Index:</span>
+                                <span class="text-green-400 font-bold">0.3s</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span id="log-fcp">🚀 First Contentful Paint:</span>
+                                <span class="text-green-400 font-bold">0.2s</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span id="log-weight">📦 Bundle Size:</span>
+                                <span class="text-brand-red font-bold">&lt; 14 KB</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- LIVE BEFORE VS AFTER SLIDER -->
+    <section class="py-16 border-t border-b border-white/5 bg-zinc-950/40 relative">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-3xl font-black tracking-tight" id="slider-title">The Brutal Speed Difference</h2>
+                <p class="text-zinc-400 text-sm mt-3" id="slider-subtitle">Drag the slider to compare standard online platforms (Elementor, Shopify themes) with our ultra-optimized custom HTML/CSS code.</p>
+            </div>
+
+            <!-- Slider Wrapper -->
+            <div class="relative bg-zinc-900 border border-white/10 rounded-2xl overflow-hidden aspect-[16/9] max-w-4xl mx-auto select-none">
+                <!-- BEFORE: Slow platform -->
+                <div class="absolute inset-0 bg-zinc-950 p-6 sm:p-12 flex flex-col justify-between">
+                    <div>
+                        <span class="bg-zinc-800 text-zinc-400 text-xs px-3 py-1 rounded-full font-bold uppercase tracking-wider" id="slider-tag-before">Standard Builders (Shopify / Elementor)</span>
+                        <h3 class="text-2xl sm:text-3xl font-bold mt-4 text-zinc-400" id="slider-header-before">Slow, Bloated & Losing Customers</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="border border-white/5 bg-white/5 p-4 rounded-xl">
+                                <span class="text-zinc-500 text-xs font-bold block" id="slider-col1-lbl">Mobile Score</span>
+                                <span class="text-red-500 text-3xl font-black">24 / 100</span>
+                            </div>
+                            <div class="border border-white/5 bg-white/5 p-4 rounded-xl">
+                                <span class="text-zinc-500 text-xs font-bold block" id="slider-col2-lbl">Load Time</span>
+                                <span class="text-red-500 text-3xl font-black">6.4s</span>
+                            </div>
+                        </div>
+                        <p class="text-xs text-red-400/80 italic font-semibold" id="slider-desc-before">⚠️ 53% of mobile visitors leave websites that take over 3 seconds to load!</p>
+                    </div>
+                </div>
+
+                <!-- AFTER: Sawab custom page (resizes on slide) -->
+                <div id="slider-after-container" class="absolute inset-y-0 left-0 right-0 bg-brand-red p-6 sm:p-12 flex flex-col justify-between overflow-hidden" style="width: 50%;">
+                    <!-- Wrap in a fixed width wrapper to avoid squishing text when sliding -->
+                    <div class="absolute inset-0 bg-gradient-to-br from-brand-red to-brand-darkRed p-6 sm:p-12 flex flex-col justify-between" style="width: 100%; min-width: 320px;">
+                        <div>
+                            <span class="bg-black text-white text-xs px-3 py-1 rounded-full font-bold uppercase tracking-wider" id="slider-tag-after">SAWAB CUSTOM CODE</span>
+                            <h3 class="text-2xl sm:text-3xl font-black mt-4 text-white" id="slider-header-after">Instant Render & Max Conversions</h3>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="border border-white/10 bg-black/25 p-4 rounded-xl">
+                                    <span class="text-white/60 text-xs font-bold block" id="slider-col3-lbl">Mobile Score</span>
+                                    <span class="text-white text-3xl font-black">99 / 100</span>
+                                </div>
+                                <div class="border border-white/10 bg-black/25 p-4 rounded-xl">
+                                    <span class="text-white/60 text-xs font-bold block" id="slider-col4-lbl">Load Time</span>
+                                    <span class="text-white text-3xl font-black">0.3s</span>
+                                </div>
+                            </div>
+                            <p class="text-xs text-white/90 font-bold" id="slider-desc-after">🚀 Maximize conversions & minimize CPC on Facebook, TikTok, and Snapchat ads!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slider Control Bar -->
+                <div id="slider-handle" class="absolute inset-y-0 left-1/2 w-1.5 bg-white cursor-ew-resize flex items-center justify-center shadow-2xl" style="left: 50%;">
+                    <div class="w-8 h-8 rounded-full bg-black border-2 border-white text-white flex items-center justify-center text-xs font-bold shadow-lg pointer-events-none">
+                        ↔️
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LIVE PORTFOLIO & INTERACTIVE LANDING PAGE SIMULATOR -->
+    <section id="simulator" class="py-20 bg-zinc-950 relative border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-red text-xs font-bold uppercase tracking-widest" id="sim-badge">🎨 BUILD YOUR DREAM LANDING PAGE</span>
+                <h2 class="text-3xl sm:text-4xl font-black tracking-tight mt-2" id="sim-title">Live Landing Page Simulator</h2>
+                <p class="text-zinc-400 text-sm sm:text-base mt-4 font-light" id="sim-subtitle">
+                    Create your layout right now! Select your sections, change the primary color, and preview how responsive, clean, and beautiful your custom Sawab landing page will look on mobile & desktop!
+                </p>
+            </div>
+
+            <!-- Simulator Workspace Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                
+                <!-- Sidebar Control Panel (lg:col-span-4) -->
+                <div class="lg:col-span-4 bg-zinc-900 border border-white/10 p-6 rounded-2xl space-y-6">
+                    <h3 class="text-lg font-bold text-white border-b border-white/5 pb-3 flex items-center gap-2" id="sim-sidebar-title">
+                        🔧 Page Options
+                    </h3>
+
+                    <!-- Color Accent Selection -->
+                    <div>
+                        <label class="block text-xs font-extrabold text-zinc-400 uppercase tracking-wider mb-2" id="sim-color-lbl">Accent Color</label>
+                        <div class="flex gap-3">
+                            <button onclick="changeSimColor('#FF2A2A', 'red')" class="w-8 h-8 rounded-full bg-brand-red border-2 border-white transition-all-300 ring-2 ring-offset-2 ring-transparent" id="sim-color-red"></button>
+                            <button onclick="changeSimColor('#2563EB', 'blue')" class="w-8 h-8 rounded-full bg-blue-600 border-2 border-zinc-900 transition-all-300 hover:scale-105" id="sim-color-blue"></button>
+                            <button onclick="changeSimColor('#059669', 'green')" class="w-8 h-8 rounded-full bg-emerald-600 border-2 border-zinc-900 transition-all-300 hover:scale-105" id="sim-color-green"></button>
+                            <button onclick="changeSimColor('#D97706', 'orange')" class="w-8 h-8 rounded-full bg-amber-600 border-2 border-zinc-900 transition-all-300 hover:scale-105" id="sim-color-orange"></button>
+                        </div>
+                    </div>
+
+                    <!-- Component Toggles -->
+                    <div class="space-y-3">
+                        <label class="block text-xs font-extrabold text-zinc-400 uppercase tracking-wider" id="sim-sections-lbl">Toggle Sections</label>
+                        
+                        <!-- Toggle Hero Banner -->
+                        <label class="flex items-center justify-between p-3 rounded-xl bg-zinc-950 border border-white/5 hover:border-white/10 cursor-pointer transition-all-300 select-none">
+                            <span class="text-sm font-semibold text-zinc-200" id="sim-toggle-hero">Hero Header</span>
+                            <input type="checkbox" id="sim-cb-hero" checked onchange="updateSimPreview()" class="w-4 h-4 accent-brand-red">
+                        </label>
+
+                        <!-- Toggle Social Proof -->
+                        <label class="flex items-center justify-between p-3 rounded-xl bg-zinc-950 border border-white/5 hover:border-white/10 cursor-pointer transition-all-300 select-none">
+                            <span class="text-sm font-semibold text-zinc-200" id="sim-toggle-proof">Social Proof Badge</span>
+                            <input type="checkbox" id="sim-cb-proof" checked onchange="updateSimPreview()" class="w-4 h-4 accent-brand-red">
+                        </label>
+
+                        <!-- Toggle Core Benefits -->
+                        <label class="flex items-center justify-between p-3 rounded-xl bg-zinc-950 border border-white/5 hover:border-white/10 cursor-pointer transition-all-300 select-none">
+                            <span class="text-sm font-semibold text-zinc-200" id="sim-toggle-features">Benefits & Features</span>
+                            <input type="checkbox" id="sim-cb-features" checked onchange="updateSimPreview()" class="w-4 h-4 accent-brand-red">
+                        </label>
+
+                        <!-- Toggle Review/Testimonial Slider -->
+                        <label class="flex items-center justify-between p-3 rounded-xl bg-zinc-950 border border-white/5 hover:border-white/10 cursor-pointer transition-all-300 select-none">
+                            <span class="text-sm font-semibold text-zinc-200" id="sim-toggle-reviews">Customer Reviews</span>
+                            <input type="checkbox" id="sim-cb-reviews" checked onchange="updateSimPreview()" class="w-4 h-4 accent-brand-red">
+                        </label>
+
+                        <!-- Toggle Order Form -->
+                        <label class="flex items-center justify-between p-3 rounded-xl bg-zinc-950 border border-white/5 hover:border-white/10 cursor-pointer transition-all-300 select-none">
+                            <span class="text-sm font-semibold text-zinc-200" id="sim-toggle-order">COD Cash Form</span>
+                            <input type="checkbox" id="sim-cb-order" checked onchange="updateSimPreview()" class="w-4 h-4 accent-brand-red">
+                        </label>
+                    </div>
+
+                    <!-- Layout Presets (Quick select) -->
+                    <div class="pt-4 border-t border-white/5">
+                        <label class="block text-xs font-extrabold text-zinc-400 uppercase tracking-wider mb-2" id="sim-preset-lbl">Niche Templates</label>
+                        <div class="grid grid-cols-2 gap-2 text-xs">
+                            <button onclick="applySimPreset('cod')" class="bg-zinc-950 border border-white/10 hover:border-brand-red py-2 px-3 rounded-lg text-zinc-300 font-semibold" id="sim-preset-cod">📦 COD E-com</button>
+                            <button onclick="applySimPreset('lead')" class="bg-zinc-950 border border-white/10 hover:border-brand-red py-2 px-3 rounded-lg text-zinc-300 font-semibold" id="sim-preset-lead">🎯 Lead Gen</button>
+                        </div>
+                    </div>
+
+                    <!-- Order Layout CTA Button -->
+                    <button onclick="orderThisSimulatedLayout()" class="w-full bg-brand-red hover:bg-brand-darkRed text-white font-extrabold py-3 px-4 rounded-xl text-sm transition-all-300 shadow-lg shadow-brand-red/20 hover:shadow-brand-red/40" id="sim-order-btn">
+                        🛒 Order This Exact Layout
+                    </button>
+                </div>
+
+                <!-- Live Preview Canvas Container (lg:col-span-8) -->
+                <div class="lg:col-span-8 flex flex-col gap-4">
+                    
+                    <!-- Preview Canvas Controls (Responsive switch: Mobile vs Desktop) -->
+                    <div class="flex items-center justify-between bg-zinc-900 border border-white/10 p-3 rounded-xl">
+                        <div class="flex items-center gap-2">
+                            <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                            <span class="text-xs font-bold text-zinc-400" id="sim-preview-lbl">LIVE INTERACTIVE MOCKUP</span>
+                        </div>
+                        
+                        <div class="flex gap-2 text-xs">
+                            <button onclick="changePreviewMode('desktop')" id="sim-mode-desktop" class="bg-brand-red text-white py-1 px-3 rounded-lg font-bold flex items-center gap-1.5 transition-all-300">
+                                🖥️ <span id="sim-lbl-desktop">Desktop</span>
+                            </button>
+                            <button onclick="changePreviewMode('mobile')" id="sim-mode-mobile" class="bg-zinc-950 border border-white/10 text-zinc-400 hover:text-white py-1 px-3 rounded-lg font-bold flex items-center gap-1.5 transition-all-300">
+                                📱 <span id="sim-lbl-mobile">Mobile</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Visual Render Space -->
+                    <div class="bg-zinc-950 border border-white/10 rounded-2xl p-4 min-h-[480px] flex justify-center items-start overflow-hidden relative shadow-inner">
+                        
+                        <!-- Main Preview Page Simulator Frame -->
+                        <div id="sim-frame" class="w-full bg-white text-zinc-900 rounded-xl overflow-y-auto max-h-[600px] shadow-2xl transition-all duration-500" style="max-width: 100%;">
+                            
+                            <!-- SIMULATOR - INTERNAL COMPONENT: HERO -->
+                            <div id="sim-preview-hero" class="bg-zinc-900 text-white p-6 sm:p-10 text-center relative border-b border-white/5">
+                                <div class="max-w-md mx-auto space-y-4">
+                                    <span class="text-xs font-bold uppercase tracking-wider text-white bg-zinc-800 px-3 py-1 rounded-full border border-white/10" id="sim-inner-tag">🔥 Best Selling Product</span>
+                                    <h4 class="text-xl sm:text-2xl font-black text-white" id="sim-inner-title">Amazing Premium Product Title Here</h4>
+                                    <p class="text-xs text-zinc-400 font-light" id="sim-inner-subtitle">Describe the biggest promise of your physical e-commerce product or service. Instantly convince the client.</p>
+                                    <a href="#sim-form" class="sim-accent-bg inline-flex py-2 px-6 rounded-lg text-xs font-bold text-white shadow-lg tracking-wide hover:scale-105 transition-all-300" id="sim-inner-cta">Order Now - Buy 1 Get 1 Free</a>
+                                </div>
+                            </div>
+
+                            <!-- SIMULATOR - INTERNAL COMPONENT: PROOF -->
+                            <div id="sim-preview-proof" class="bg-zinc-50 border-b border-zinc-200 py-3 text-center">
+                                <div class="flex flex-wrap justify-center items-center gap-4 text-xs font-bold text-zinc-500">
+                                    <span class="flex items-center gap-1">⭐ 4.9/5 Rating</span>
+                                    <span>•</span>
+                                    <span class="flex items-center gap-1">🚚 Fast Morocco Shipping</span>
+                                    <span>•</span>
+                                    <span class="flex items-center gap-1">💵 Cash on Delivery</span>
+                                </div>
+                            </div>
+
+                            <!-- SIMULATOR - INTERNAL COMPONENT: FEATURES -->
+                            <div id="sim-preview-features" class="p-6 sm:p-10 bg-white border-b border-zinc-100">
+                                <h5 class="text-center text-sm font-black text-zinc-900 uppercase tracking-widest mb-6" id="sim-inner-features-title">Why Our Customers Love Us</h5>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div class="p-4 bg-zinc-50 rounded-xl border border-zinc-100 flex items-start gap-3">
+                                        <div class="sim-accent-text text-xl font-bold">💎</div>
+                                        <div>
+                                            <h6 class="text-xs font-bold text-zinc-900" id="sim-inner-feat1-title">Ultra High Quality Material</h6>
+                                            <p class="text-[10px] text-zinc-500 mt-1" id="sim-inner-feat1-desc">Designed to last with premium industrial standards.</p>
+                                        </div>
+                                    </div>
+                                    <div class="p-4 bg-zinc-50 rounded-xl border border-zinc-100 flex items-start gap-3">
+                                        <div class="sim-accent-text text-xl font-bold">🔒</div>
+                                        <div>
+                                            <h6 class="text-xs font-bold text-zinc-900" id="sim-inner-feat2-title">100% Secure Guarantee</h6>
+                                            <p class="text-[10px] text-zinc-500 mt-1" id="sim-inner-feat2-desc">Full 30-day money back guarantee with no questions asked.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- SIMULATOR - INTERNAL COMPONENT: REVIEWS -->
+                            <div id="sim-preview-reviews" class="p-6 bg-zinc-50 border-b border-zinc-100">
+                                <div class="max-w-md mx-auto text-center space-y-4">
+                                    <div class="text-yellow-500 text-lg">⭐⭐⭐⭐⭐</div>
+                                    <p class="text-xs text-zinc-600 italic font-semibold" id="sim-inner-review-text">"Sawab built this page, and my e-commerce sales literally skyrocketed! Customers find it so fast and easy to purchase. The order form takes 5 seconds."</p>
+                                    <span class="block text-[10px] font-bold text-zinc-400 uppercase tracking-wider" id="sim-inner-review-author">— Ahmed K., E-com Brand Owner (Casablanca)</span>
+                                </div>
+                            </div>
+
+                            <!-- SIMULATOR - INTERNAL COMPONENT: ORDER FORM -->
+                            <div id="sim-preview-order" class="p-6 sm:p-10 bg-white" id="sim-form">
+                                <div class="max-w-sm mx-auto bg-zinc-50 border border-zinc-200 rounded-2xl p-6 shadow-sm">
+                                    <div class="text-center mb-4">
+                                        <span class="bg-red-100 text-red-600 text-[10px] font-bold px-2 py-0.5 rounded-full" id="sim-inner-form-badge">🔥 Limited stock left</span>
+                                        <h6 class="text-sm font-black text-zinc-900 mt-2" id="sim-inner-form-title">Order Form - Cash On Delivery</h6>
+                                    </div>
+                                    
+                                    <div class="space-y-3 text-xs">
+                                        <div>
+                                            <label class="block font-bold text-zinc-700 mb-1" id="sim-inner-lbl-name">Your Full Name</label>
+                                            <input type="text" class="w-full bg-white border border-zinc-300 rounded-lg p-2 focus:outline-none" disabled placeholder="e.g. Tarik Ben Ali">
+                                        </div>
+                                        <div>
+                                            <label class="block font-bold text-zinc-700 mb-1" id="sim-inner-lbl-phone">WhatsApp Phone Number</label>
+                                            <input type="text" class="w-full bg-white border border-zinc-300 rounded-lg p-2 focus:outline-none" disabled placeholder="e.g. 0612345678">
+                                        </div>
+                                        <button class="sim-accent-bg w-full text-white font-extrabold py-3.5 rounded-lg text-xs tracking-wider uppercase transition-all-300 hover:opacity-90" disabled id="sim-inner-form-btn">
+                                            Confirm My Order (Pay Cash)
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES & ADVANTAGES SECTION -->
+    <section id="features" class="py-20 bg-black relative border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-red text-xs font-bold uppercase tracking-widest" id="feat-badge">⚙️ WHAT WE DELIVER</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-white mt-2" id="feat-title">Why Custom Code Beats Page Builders</h2>
+                <p class="text-zinc-400 text-sm mt-3" id="feat-subtitle">We don't use WordPress, Elementor, or drag-and-drop templates. We write clean, custom HTML, CSS, and JS. Here is what that means for your brand.</p>
+            </div>
+
+            <!-- Features Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1: Pure Speed -->
+                <div class="bg-zinc-900/60 border border-white/5 hover:border-brand-red/30 p-8 rounded-2xl transition-all-300 group">
+                    <div class="w-12 h-12 bg-brand-red/10 group-hover:bg-brand-red text-brand-red group-hover:text-white rounded-xl flex items-center justify-center text-xl font-bold mb-6 transition-all-300">
+                        ⚡
+                    </div>
+                    <h3 class="text-xl font-extrabold text-white mb-2" id="feat1-title">Extreme Speed Optimization</h3>
+                    <p class="text-zinc-400 text-sm font-light leading-relaxed" id="feat1-desc">Your page loads under 0.5s. Fast pages prevent bounce rates, reducing your advertising cost per click and increasing orders instantly.</p>
+                </div>
+
+                <!-- Feature 2: High Conversion Design -->
+                <div class="bg-zinc-900/60 border border-white/5 hover:border-brand-red/30 p-8 rounded-2xl transition-all-300 group">
+                    <div class="w-12 h-12 bg-brand-red/10 group-hover:bg-brand-red text-brand-red group-hover:text-white rounded-xl flex items-center justify-center text-xl font-bold mb-6 transition-all-300">
+                        🎯
+                    </div>
+                    <h3 class="text-xl font-extrabold text-white mb-2" id="feat2-title">Psychology-Backed Copywriting</h3>
+                    <p class="text-zinc-400 text-sm font-light leading-relaxed" id="feat2-desc">Our team writes high-converting copy in Darija, Arabic, English, or French to address customer objections and double your ROI.</p>
+                </div>
+
+                <!-- Feature 3: Pixel Perfect Tracking -->
+                <div class="bg-zinc-900/60 border border-white/5 hover:border-brand-red/30 p-8 rounded-2xl transition-all-300 group">
+                    <div class="w-12 h-12 bg-brand-red/10 group-hover:bg-brand-red text-brand-red group-hover:text-white rounded-xl flex items-center justify-center text-xl font-bold mb-6 transition-all-300">
+                        📊
+                    </div>
+                    <h3 class="text-xl font-extrabold text-white mb-2" id="feat3-title">Advanced Pixel Integrations</h3>
+                    <p class="text-zinc-400 text-sm font-light leading-relaxed" id="feat3-desc">No tracking drop-off. We integrate Facebook API, TikTok Pixel, Snapchat, and Google Analytics without scripts slowing down the page.</p>
+                </div>
+
+                <!-- Feature 4: COD Form Customization -->
+                <div class="bg-zinc-900/60 border border-white/5 hover:border-brand-red/30 p-8 rounded-2xl transition-all-300 group">
+                    <div class="w-12 h-12 bg-brand-red/10 group-hover:bg-brand-red text-brand-red group-hover:text-white rounded-xl flex items-center justify-center text-xl font-bold mb-6 transition-all-300">
+                        📦
+                    </div>
+                    <h3 class="text-xl font-extrabold text-white mb-2" id="feat4-title">Interactive COD Order Forms</h3>
+                    <p class="text-zinc-400 text-sm font-light leading-relaxed" id="feat4-desc">High-speed checkout forms that link to Google Sheets, CRM, and WhatsApp instantly, saving you time and money.</p>
+                </div>
+
+                <!-- Feature 5: Multilingual Support -->
+                <div class="bg-zinc-900/60 border border-white/5 hover:border-brand-red/30 p-8 rounded-2xl transition-all-300 group">
+                    <div class="w-12 h-12 bg-brand-red/10 group-hover:bg-brand-red text-brand-red group-hover:text-white rounded-xl flex items-center justify-center text-xl font-bold mb-6 transition-all-300">
+                        🌍
+                    </div>
+                    <h3 class="text-xl font-extrabold text-white mb-2" id="feat5-title">Seamless Multi-Language</h3>
+                    <p class="text-zinc-400 text-sm font-light leading-relaxed" id="feat5-desc">Engage both Moroccan and foreign clients. Instantly toggle between Darija, Classical Arabic, French, and English.</p>
+                </div>
+
+                <!-- Feature 6: Lifetime Free Hosting -->
+                <div class="bg-zinc-900/60 border border-white/5 hover:border-brand-red/30 p-8 rounded-2xl transition-all-300 group">
+                    <div class="w-12 h-12 bg-brand-red/10 group-hover:bg-brand-red text-brand-red group-hover:text-white rounded-xl flex items-center justify-center text-xl font-bold mb-6 transition-all-300">
+                        ☁️
+                    </div>
+                    <h3 class="text-xl font-extrabold text-white mb-2" id="feat6-title">No Monthly Hosting Fees</h3>
+                    <p class="text-zinc-400 text-sm font-light leading-relaxed" id="feat6-desc">Stop paying $29/mo to hosting services or Shopify. We host your code on ultra-secure cloud platforms with unlimited bandwidth for $0/mo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE ROI / REVENUE CALCULATOR -->
+    <section id="calculator" class="py-20 bg-zinc-950 border-b border-white/5 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-red text-xs font-bold uppercase tracking-widest" id="calc-badge">💰 EARNING CALCULATOR</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-white mt-2" id="calc-title">How Much More Money Will You Make?</h2>
+                <p class="text-zinc-400 text-sm mt-3" id="calc-subtitle">Most online sellers waste 60%+ of their ad budget on slow pages. See how much our optimized speed and copywriting can increase your daily profits.</p>
+            </div>
+
+            <!-- Calculator Panel Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-zinc-900/80 border border-white/10 rounded-3xl p-6 sm:p-10 relative overflow-hidden">
+                
+                <!-- Left: Control sliders -->
+                <div class="lg:col-span-6 space-y-6">
+                    <h3 class="text-xl font-bold text-white flex items-center gap-2" id="calc-input-title">
+                        📊 Enter Your Business Numbers
+                    </h3>
+
+                    <!-- Daily Visitors Slider -->
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-center text-sm">
+                            <span class="text-zinc-300 font-semibold" id="calc-lbl-visitors">Daily Traffic (Visitors)</span>
+                            <span class="text-brand-red font-black text-lg" id="calc-val-visitors">1,500</span>
+                        </div>
+                        <input type="range" id="input-visitors" min="100" max="10000" step="100" value="1500" oninput="calculateROI()" class="w-full accent-brand-red bg-zinc-950 h-2 rounded-lg cursor-pointer">
+                    </div>
+
+                    <!-- Average Order Value (DH) -->
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-center text-sm">
+                            <span class="text-zinc-300 font-semibold" id="calc-lbl-aov">Average Product Price (DH)</span>
+                            <span class="text-brand-red font-black text-lg" id="calc-val-aov">250 DH</span>
+                        </div>
+                        <input type="range" id="input-aov" min="50" max="2000" step="10" value="250" oninput="calculateROI()" class="w-full accent-brand-red bg-zinc-950 h-2 rounded-lg cursor-pointer">
+                    </div>
+
+                    <!-- Current Conversion Rate -->
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-center text-sm">
+                            <span class="text-zinc-300 font-semibold" id="calc-lbl-cr">Current Conversion Rate</span>
+                            <span class="text-brand-red font-black text-lg" id="calc-val-cr">1.2%</span>
+                        </div>
+                        <input type="range" id="input-cr" min="0.2" max="5.0" step="0.1" value="1.2" oninput="calculateROI()" class="w-full accent-brand-red bg-zinc-950 h-2 rounded-lg cursor-pointer">
+                    </div>
+                </div>
+
+                <!-- Right: Results display -->
+                <div class="lg:col-span-6 bg-black border border-white/10 rounded-2xl p-6 sm:p-8 space-y-6">
+                    <div class="text-center border-b border-white/5 pb-4">
+                        <span class="bg-brand-red/10 text-brand-red text-xs px-3 py-1 rounded-full font-bold uppercase tracking-wider" id="calc-comparison-badge">⚡ COMPARISON SIMULATION</span>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <!-- Current Store revenue -->
+                        <div class="p-4 bg-zinc-900 rounded-xl border border-white/5">
+                            <span class="text-zinc-500 text-xs font-bold block uppercase tracking-wider" id="calc-lbl-current-rev">Current Daily Sales</span>
+                            <span class="text-white text-xl font-bold block mt-1" id="res-current-sales">4,500 DH</span>
+                            <span class="text-zinc-500 text-[10px]" id="res-current-orders">18 orders</span>
+                        </div>
+
+                        <!-- Sawab Revenue -->
+                        <div class="p-4 bg-brand-red/5 border border-brand-red/30 rounded-xl">
+                            <span class="text-brand-red text-xs font-bold block uppercase tracking-wider" id="calc-lbl-sawab-rev">SAWAB Daily Sales</span>
+                            <span class="text-brand-red text-2xl font-black block mt-1 text-glow" id="res-sawab-sales">15,000 DH</span>
+                            <span class="text-zinc-300 text-[10px] font-bold" id="res-sawab-orders">60 orders (at 4% CR)</span>
+                        </div>
+                    </div>
+
+                    <!-- Incremental monthly profit -->
+                    <div class="bg-zinc-900/80 p-5 rounded-xl border border-white/10 text-center space-y-1">
+                        <span class="text-zinc-400 text-xs font-semibold" id="calc-lbl-extra">Potential Extra Profit Monthly</span>
+                        <span class="block text-3xl font-black text-emerald-400 text-glow" id="res-extra-profit">+ 315,000 DH</span>
+                        <p class="text-[10px] text-zinc-500 mt-1" id="calc-footer-desc">Assuming 4% average conversion rate with Sawab custom landing page.</p>
+                    </div>
+
+                    <a href="#pricing" class="w-full inline-flex justify-center items-center gap-2 bg-brand-red hover:bg-brand-darkRed text-white text-sm font-extrabold py-3.5 px-4 rounded-xl transition-all-300 tracking-wider shadow-lg shadow-brand-red/20" id="calc-cta">
+                        🚀 INCREASE MY REVENUE NOW
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING & CUSTOM CONFIGURATOR SECTION -->
+    <section id="pricing" class="py-20 bg-black relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-red text-xs font-bold uppercase tracking-widest" id="price-badge">💳 HONEST & TRANSPARENT PRICING</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-white mt-2" id="price-title">Choose Your Success Plan</h2>
+                <p class="text-zinc-400 text-sm mt-3" id="price-subtitle">No recurring subscriptions or hosting bills. You pay once, and own the code forever. Select a package and customize your features below.</p>
+            </div>
+
+            <!-- Standard Pricing Plans -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                
+                <!-- Package 1: STARTER -->
+                <div class="bg-zinc-900 border border-white/5 hover:border-white/10 rounded-2xl p-8 relative flex flex-col justify-between transition-all-300" id="plan-starter-card">
+                    <div>
+                        <span class="text-xs font-bold text-zinc-400 uppercase tracking-widest block mb-1">STARTER</span>
+                        <h3 class="text-2xl font-black text-white" id="plan-starter-title">COD Beginner</h3>
+                        <p class="text-zinc-400 text-xs font-light mt-2 mb-6" id="plan-starter-desc">Perfect for testing a single physical product in local e-commerce.</p>
+                        
+                        <!-- Price display -->
+                        <div class="flex items-baseline gap-1 mb-8">
+                            <span class="text-4xl font-black text-white" id="plan-starter-price">499 DH</span>
+                            <span class="text-zinc-500 text-xs" id="plan-starter-once">/ one-time</span>
+                        </div>
+
+                        <!-- Feature list -->
+                        <ul class="space-y-4 text-xs font-medium text-zinc-300 border-t border-white/5 pt-6">
+                            <li class="flex items-center gap-2">
+                                <span class="text-brand-red font-bold">✓</span> <span id="plan-starter-feat1">1 Custom-Coded Page</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-brand-red font-bold">✓</span> <span id="plan-starter-feat2">Ultra-Fast Loading (0.4s)</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-brand-red font-bold">✓</span> <span id="plan-starter-feat3">Responsive Mobile Layout</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-brand-red font-bold">✓</span> <span id="plan-starter-feat4">1 Pixel Integration (FB/TikTok)</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-brand-red font-bold">✓</span> <span id="plan-starter-feat5">COD Order Form setup</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <button onclick="selectPlan('starter')" class="w-full mt-8 bg-zinc-950 border border-white/10 hover:border-brand-red text-zinc-200 font-bold py-3.5 px-4 rounded-xl text-xs tracking-wider transition-all-300" id="plan-starter-btn">
+                        Select Starter Pack
+                    </button>
+                </div>
+
+                <!-- Package 2: BEST SELLER (PRO) -->
+                <div class="bg-zinc-900 border-2 border-brand-red rounded-2xl p-8 relative flex flex-col justify-between transition-all-300 glow-red transform lg:-translate-y-2" id="plan-pro-card">
+                    <span class="absolute top-0 right-1/2 translate-x-1/2 -translate-y-1/2 bg-brand-red text-white text-[10px] font-black tracking-widest px-4 py-1.5 rounded-full uppercase" id="plan-pro-tag">BEST SELLER</span>
+                    
+                    <div>
+                        <span class="text-xs font-bold text-brand-red uppercase tracking-widest block mb-1">PROFESSIONAL</span>
+                        <h3 class="text-2xl font-black text-white" id="plan-pro-title">E-com Scale Pack</h3>
+                        <p class="text-zinc-400 text-xs font-light mt-2 mb-6" id="plan-pro-desc">For serious e-commerce brands wanting optimized sales copy & multi-pixels.</p>
+                        
+                        <!-- Price display -->
+                        <div class="flex items-baseline gap-1 mb-8">
+                            <span class="text-4xl font-black text-white" id="plan-pro-price">899 DH</span>
+                            <span class="text-zinc-400 text-xs" id="plan-pro-once">/ one-time</span>
+                        </div>
+
+                        <!-- Feature list -->
+                        <ul class="space-y-4 text-xs font-medium text-zinc-200 border-t border-white/5 pt-6">
+                            <li class="flex items-center gap-2">
+                                <span class="text-brand-red font-bold">✓</span> <span id="plan-pro-feat1">Premium Custom Design</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-brand-red font-bold">✓</span> <span id="plan-pro-feat2">Ultra Fast Loading (0.3s)</span>
+                            </li>
+                            <li class="flex items-center gap-2 text-brand-red font-bold">
+                                <span>✓</span> <span class="text-zinc-200" id="plan-pro-feat3">Professional Darija/FR Copywriting</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-brand-red font-bold">✓</span> <span id="plan-pro-feat4">Multi-Pixel API tracking</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-brand-red font-bold">✓</span> <span id="plan-pro-feat5">Google Sheets Order Integration</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-brand-red font-bold">✓</span> <span id="plan-pro-feat6">Thank You Page + Upsell Form</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <button onclick="selectPlan('pro')" class="w-full mt-8 bg-brand-red hover:bg-brand-darkRed text-white font-black py-3.5 px-4 rounded-xl text-xs tracking-wider transition-all-300 shadow-lg shadow-brand-red/20" id="plan-pro-btn">
+                        Select Best Seller Pack
+                    </button>
+                </div>
+
+                <!-- Package 3: ELITE / ENTERPRISE -->
+                <div class="bg-zinc-900 border border-white/5 hover:border-white/10 rounded-2xl p-8 relative flex flex-col justify-between transition-all-300" id="plan-elite-card">
+                    <div>
+                        <span class="text-xs font-bold text-zinc-400 uppercase tracking-widest block mb-1">ELITE</span>
+                        <h3 class="text-2xl font-black text-white" id="plan-elite-title">Ultimate Suite</h3>
+                        <p class="text-zinc-400 text-xs font-light mt-2 mb-6" id="plan-elite-desc">Complete e-commerce infrastructure with domains, backups & 1-year updates.</p>
+                        
+                        <!-- Price display -->
+                        <div class="flex items-baseline gap-1 mb-8">
+                            <span class="text-4xl font-black text-white" id="plan-elite-price">1,799 DH</span>
+                            <span class="text-zinc-500 text-xs" id="plan-elite-once">/ one-time</span>
+                        </div>
+
+                        <!-- Feature list -->
+                        <ul class="space-y-4 text-xs font-medium text-zinc-300 border-t border-white/5 pt-6">
+                            <li class="flex items-center gap-2">
+                                <span class="text-brand-red font-bold">✓</span> <span id="plan-elite-feat1">Multiple Page Funnels</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-brand-red font-bold">✓</span> <span id="plan-elite-feat2">Fully Bilingual Page</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-brand-red font-bold">✓</span> <span id="plan-elite-feat3">Custom domain (.ma / .com) setup</span>
+                            </li>
+                            <li class="flex items-center gap-2 font-bold text-brand-red">
+                                <span>✓</span> <span class="text-zinc-300" id="plan-elite-feat4">Unlimited Bandwidth Server ($0/mo)</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-brand-red font-bold">✓</span> <span id="plan-elite-feat5">Dedicated priority support (1 Year)</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <button onclick="selectPlan('elite')" class="w-full mt-8 bg-zinc-950 border border-white/10 hover:border-brand-red text-zinc-200 font-bold py-3.5 px-4 rounded-xl text-xs tracking-wider transition-all-300" id="plan-elite-btn">
+                        Select Elite Pack
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- Custom Configuration Add-Ons & Checkout Order Form -->
+            <div class="bg-zinc-900 border border-white/10 rounded-3xl p-6 sm:p-10 max-w-4xl mx-auto">
+                <div class="border-b border-white/5 pb-6 mb-8 text-center lg:text-left">
+                    <h4 class="text-xl font-bold text-white" id="config-title">🛠️ Customize Your Order & Fill Details</h4>
+                    <p class="text-zinc-400 text-xs mt-2" id="config-subtitle">Toggle premium features to add to your selected plan in real-time. Fill in the details below to complete your checkout order via WhatsApp.</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                    
+                    <!-- Left: Custom checkboxes (lg:col-span-6) -->
+                    <div class="lg:col-span-6 space-y-4">
+                        <h5 class="text-xs font-bold text-zinc-400 uppercase tracking-wider mb-2" id="config-addon-lbl">Select Add-Ons</h5>
+                        
+                        <!-- Addon 1: Copywriting -->
+                        <label class="flex items-center justify-between p-3 rounded-xl bg-zinc-950 border border-white/5 hover:border-brand-red/30 cursor-pointer select-none transition-all-300">
+                            <div class="flex items-start gap-3">
+                                <input type="checkbox" id="addon-copy" onchange="updateTotalPrice()" class="w-4.5 h-4.5 accent-brand-red mt-0.5">
+                                <div>
+                                    <span class="text-xs font-extrabold text-white block" id="addon-copy-title">Premium Copywriting</span>
+                                    <span class="text-[10px] text-zinc-500 block" id="addon-copy-desc">Professional copywriting to persuade buyers.</span>
+                                </div>
+                            </div>
+                            <span class="text-xs font-black text-brand-red">+ 300 DH</span>
+                        </label>
+
+                        <!-- Addon 2: Fast 24H Delivery -->
+                        <label class="flex items-center justify-between p-3 rounded-xl bg-zinc-950 border border-white/5 hover:border-brand-red/30 cursor-pointer select-none transition-all-300">
+                            <div class="flex items-start gap-3">
+                                <input type="checkbox" id="addon-speed" onchange="updateTotalPrice()" class="w-4.5 h-4.5 accent-brand-red mt-0.5">
+                                <div>
+                                    <span class="text-xs font-extrabold text-white block" id="addon-speed-title">Express 24H Delivery</span>
+                                    <span class="text-[10px] text-zinc-500 block" id="addon-speed-desc">Prioritize your project in our development queue.</span>
+                                </div>
+                            </div>
+                            <span class="text-xs font-black text-brand-red">+ 200 DH</span>
+                        </label>
+
+                        <!-- Addon 3: Custom Domain Setup -->
+                        <label class="flex items-center justify-between p-3 rounded-xl bg-zinc-950 border border-white/5 hover:border-brand-red/30 cursor-pointer select-none transition-all-300">
+                            <div class="flex items-start gap-3">
+                                <input type="checkbox" id="addon-domain" onchange="updateTotalPrice()" class="w-4.5 h-4.5 accent-brand-red mt-0.5">
+                                <div>
+                                    <span class="text-xs font-extrabold text-white block" id="addon-domain-title">Custom Domain Setup (.ma / .com)</span>
+                                    <span class="text-[10px] text-zinc-500 block" id="addon-domain-desc">We register and setup your domain.</span>
+                                </div>
+                            </div>
+                            <span class="text-xs font-black text-brand-red">+ 150 DH</span>
+                        </label>
+
+                        <!-- Addon 4: Multi-variant upsell page -->
+                        <label class="flex items-center justify-between p-3 rounded-xl bg-zinc-950 border border-white/5 hover:border-brand-red/30 cursor-pointer select-none transition-all-300">
+                            <div class="flex items-start gap-3">
+                                <input type="checkbox" id="addon-upsell" onchange="updateTotalPrice()" class="w-4.5 h-4.5 accent-brand-red mt-0.5">
+                                <div>
+                                    <span class="text-xs font-extrabold text-white block" id="addon-upsell-title">Upsell & Multi-Offer Page</span>
+                                    <span class="text-[10px] text-zinc-500 block" id="addon-upsell-desc">High-speed thank you page with upsell triggers.</span>
+                                </div>
+                            </div>
+                            <span class="text-xs font-black text-brand-red">+ 250 DH</span>
+                        </label>
+                    </div>
+
+                    <!-- Right: Checkout Cash Order Form (lg:col-span-6) -->
+                    <form onsubmit="handleFormSubmit(event)" class="lg:col-span-6 space-y-4">
+                        <h5 class="text-xs font-bold text-zinc-400 uppercase tracking-wider mb-2" id="config-form-lbl">Checkout Information</h5>
+                        
+                        <!-- Selected Pack Display -->
+                        <div class="bg-zinc-950 border border-white/5 p-3 rounded-xl flex justify-between items-center text-xs">
+                            <span class="text-zinc-400 font-semibold" id="form-plan-lbl">Selected Plan:</span>
+                            <span id="form-selected-plan" class="text-white font-extrabold uppercase tracking-wide bg-brand-red/20 px-3 py-1 rounded border border-brand-red/30 text-[11px]">PROFESSIONAL (899 DH)</span>
+                        </div>
+
+                        <!-- Full Name Input -->
+                        <div>
+                            <label class="block text-zinc-400 text-xs font-bold mb-1" id="lbl-fullname">Full Name *</label>
+                            <input type="text" id="form-name" required class="w-full bg-zinc-950 border border-white/10 rounded-xl p-3 text-sm focus:outline-none focus:border-brand-red transition-all-300 text-white" placeholder="e.g. Tarik Ben Ali">
+                        </div>
+
+                        <!-- WhatsApp Phone Number Input -->
+                        <div>
+                            <label class="block text-zinc-400 text-xs font-bold mb-1" id="lbl-phone">WhatsApp Number *</label>
+                            <input type="tel" id="form-phone" required class="w-full bg-zinc-950 border border-white/10 rounded-xl p-3 text-sm focus:outline-none focus:border-brand-red transition-all-300 text-white" placeholder="e.g. 0612345678">
+                        </div>
+
+                        <!-- Business Niche / Product Description -->
+                        <div>
+                            <label class="block text-zinc-400 text-xs font-bold mb-1" id="lbl-niche">Your Product / Business Niche *</label>
+                            <input type="text" id="form-niche" required class="w-full bg-zinc-950 border border-white/10 rounded-xl p-3 text-sm focus:outline-none focus:border-brand-red transition-all-300 text-white" placeholder="e.g. Cosmetics, Kitchen Tools, Car Accessories">
+                        </div>
+
+                        <!-- Live Price Tag -->
+                        <div class="pt-4 border-t border-white/5 flex justify-between items-center">
+                            <div>
+                                <span class="text-zinc-500 text-[10px] font-extrabold uppercase tracking-widest block" id="form-total-lbl">Estimated Total</span>
+                                <span class="text-3xl font-black text-brand-red text-glow" id="form-total-price">899 DH</span>
+                            </div>
+                            
+                            <button type="submit" class="bg-brand-red hover:bg-brand-darkRed text-white text-xs sm:text-sm font-extrabold py-3.5 px-6 rounded-xl tracking-wider uppercase transition-all-300 transform hover:-translate-y-0.5 shadow-lg shadow-brand-red/20 flex items-center gap-2 group">
+                                <span id="btn-submit-text">Order via WhatsApp</span>
+                                <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-all-300 rtl-flip" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS / SOCIAL PROOF -->
+    <section class="py-20 bg-zinc-950 border-t border-b border-white/5 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-red text-xs font-bold uppercase tracking-widest" id="test-badge">💬 CLIENT REVIEWS</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-white mt-2" id="test-title">Trusted By Moroccan E-com Sellers</h2>
+                <p class="text-zinc-400 text-sm mt-3" id="test-subtitle">Check out the genuine reviews from physical product sellers, brand owners, and marketers after switching their slow platform templates to Sawab code.</p>
+            </div>
+
+            <!-- Reviews Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-zinc-900 border border-white/5 p-8 rounded-2xl relative">
+                    <span class="text-4xl text-brand-red/20 absolute top-4 right-4 font-serif">“</span>
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 bg-brand-red text-white text-xs font-bold rounded-full flex items-center justify-center uppercase">YM</div>
+                        <div>
+                            <span class="block text-sm font-extrabold text-white">Youssef M.</span>
+                            <span class="block text-[10px] text-zinc-500 font-medium">Cosmetics E-com (Casablanca)</span>
+                        </div>
+                    </div>
+                    <p class="text-zinc-300 text-xs font-light leading-relaxed mb-4" id="review1-body">
+                        "I was using Shopify, and my mobile score was 28. CPC was very high because visitors bounce before the page loads. When Sawab custom coded my page, my conversion rate jumped from 1.5% to 4.3%! I save thousands of Dirhams in ad budget!"
+                    </p>
+                    <div class="text-yellow-500 text-sm">⭐⭐⭐⭐⭐</div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-zinc-900 border border-white/5 p-8 rounded-2xl relative">
+                    <span class="text-4xl text-brand-red/20 absolute top-4 right-4 font-serif">“</span>
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 bg-brand-red text-white text-xs font-bold rounded-full flex items-center justify-center uppercase">HA</div>
+                        <div>
+                            <span class="block text-sm font-extrabold text-white">Hamza A.</span>
+                            <span class="block text-[10px] text-zinc-500 font-medium">COD Dropshipper (Marrakech)</span>
+                        </div>
+                    </div>
+                    <p class="text-zinc-300 text-xs font-light leading-relaxed mb-4" id="review2-body">
+                        "The instant multilingual switch is spectacular. Some Moroccan clients prefer reading in French, others in Arabic/Darija. The layout simulator helped me structure exactly what I wanted. Excellent speed, reliable communication."
+                    </p>
+                    <div class="text-yellow-500 text-sm">⭐⭐⭐⭐⭐</div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-zinc-900 border border-white/5 p-8 rounded-2xl relative">
+                    <span class="text-4xl text-brand-red/20 absolute top-4 right-4 font-serif">“</span>
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 bg-brand-red text-white text-xs font-bold rounded-full flex items-center justify-center uppercase">SB</div>
+                        <div>
+                            <span class="block text-sm font-extrabold text-white">Sara B.</span>
+                            <span class="block text-[10px] text-zinc-500 font-medium">Kitchenware Brand (Rabat)</span>
+                        </div>
+                    </div>
+                    <p class="text-zinc-300 text-xs font-light leading-relaxed mb-4" id="review3-body">
+                        "Amazing service. No monthly Shopify or Elementor hosting bills. They created a custom landing page for me hosted for free. The WhatsApp and Google Sheets integration is super smooth, and delivery was in less than 24h!"
+                    </p>
+                    <div class="text-yellow-500 text-sm">⭐⭐⭐⭐⭐</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section id="faq" class="py-20 bg-black relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-red text-xs font-bold uppercase tracking-widest" id="faq-badge">❓ FREQUENT QUESTIONS</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-white mt-2" id="faq-title">Got Questions? We Have Answers</h2>
+                <p class="text-zinc-400 text-sm mt-3" id="faq-subtitle">Clear and honest answers to help you understand our design and setup process.</p>
+            </div>
+
+            <!-- FAQ Accordion Wrapper -->
+            <div class="space-y-4">
+                
+                <!-- FAQ Item 1 -->
+                <div class="bg-zinc-900 border border-white/10 rounded-2xl overflow-hidden transition-all-300">
+                    <button onclick="toggleFAQ(1)" class="w-full text-left p-6 flex justify-between items-center focus:outline-none">
+                        <span class="font-extrabold text-white text-sm sm:text-base" id="faq-q1">What is the hosting cost for my landing page?</span>
+                        <span id="faq-icon-1" class="text-brand-red text-lg font-bold transition-transform duration-300">+</span>
+                    </button>
+                    <div id="faq-a-1" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-zinc-950/60">
+                        <p class="p-6 text-xs sm:text-sm text-zinc-400 font-light leading-relaxed" id="faq-a1">
+                            $0/month. Because we build using pure HTML, CSS, and JS, we can host your page on high-speed static servers (like GitHub Pages, Vercel, or Netlify) completely free of charge forever. You will never pay monthly builder bills.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="bg-zinc-900 border border-white/10 rounded-2xl overflow-hidden transition-all-300">
+                    <button onclick="toggleFAQ(2)" class="w-full text-left p-6 flex justify-between items-center focus:outline-none">
+                        <span class="font-extrabold text-white text-sm sm:text-base" id="faq-q2">Do I need my own domain name?</span>
+                        <span id="faq-icon-2" class="text-brand-red text-lg font-bold transition-transform duration-300">+</span>
+                    </button>
+                    <div id="faq-a-2" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-zinc-950/60">
+                        <p class="p-6 text-xs sm:text-sm text-zinc-400 font-light leading-relaxed" id="faq-a2">
+                            Yes, you need a domain name (like yourstore.com or yourstore.ma) so that clients can visit your site. If you already have one, we will link it for free. If you don't, you can purchase one yourself or choose our custom domain add-on, and we will register and configure it for you.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="bg-zinc-900 border border-white/10 rounded-2xl overflow-hidden transition-all-300">
+                    <button onclick="toggleFAQ(3)" class="w-full text-left p-6 flex justify-between items-center focus:outline-none">
+                        <span class="font-extrabold text-white text-sm sm:text-base" id="faq-q3">How long does the page creation take?</span>
+                        <span id="faq-icon-3" class="text-brand-red text-lg font-bold transition-transform duration-300">+</span>
+                    </button>
+                    <div id="faq-a-3" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-zinc-950/60">
+                        <p class="p-6 text-xs sm:text-sm text-zinc-400 font-light leading-relaxed" id="faq-a3">
+                            Standard delivery is within 48 hours. If you select our "Express 24H Delivery" add-on, we will prioritize your landing page and deliver it fully functional within 24 hours of receiving your product assets and details.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="bg-zinc-900 border border-white/10 rounded-2xl overflow-hidden transition-all-300">
+                    <button onclick="toggleFAQ(4)" class="w-full text-left p-6 flex justify-between items-center focus:outline-none">
+                        <span class="font-extrabold text-white text-sm sm:text-base" id="faq-q4">How do I receive my orders from the landing page?</span>
+                        <span id="faq-icon-4" class="text-brand-red text-lg font-bold transition-transform duration-300">+</span>
+                    </button>
+                    <div id="faq-a-4" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-zinc-950/60">
+                        <p class="p-6 text-xs sm:text-sm text-zinc-400 font-light leading-relaxed" id="faq-a4">
+                            We support multiple integrations. Orders can be configured to submit to a secure Google Sheet file in real-time, redirect to WhatsApp with custom pre-filled message, or trigger webhook emails. This makes COD tracking super easy.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="bg-zinc-900 border border-white/10 rounded-2xl overflow-hidden transition-all-300">
+                    <button onclick="toggleFAQ(5)" class="w-full text-left p-6 flex justify-between items-center focus:outline-none">
+                        <span class="font-extrabold text-white text-sm sm:text-base" id="faq-q5">What payment methods do you accept?</span>
+                        <span id="faq-icon-5" class="text-brand-red text-lg font-bold transition-transform duration-300">+</span>
+                    </button>
+                    <div id="faq-a-5" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-zinc-950/60">
+                        <p class="p-6 text-xs sm:text-sm text-zinc-400 font-light leading-relaxed" id="faq-a5">
+                            We accept direct bank transfers (CIH Bank, Attijariwafa Bank, BCP), international wire transfer (Wise, PayPal, Payoneer), and cryptocurrencies (USDT, BTC). Work starts after payment confirmation.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-zinc-950 border-t border-white/10 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 pb-12 border-b border-white/5">
+                
+                <!-- Logo & Intro -->
+                <div class="md:col-span-2 space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-brand-red rounded-lg flex items-center justify-center font-black text-xl text-white">
+                            S
+                        </div>
+                        <div>
+                            <span class="text-2xl font-black text-white">SAWAB</span>
+                            <span class="block text-[9px] text-zinc-400 tracking-widest uppercase font-bold" id="footer-logo-sub">CONVERSION AGENCY</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-zinc-400 max-w-sm font-light leading-relaxed" id="footer-desc">
+                        Sawab is a dedicated premium web design studio. We code fast, high-converting, and beautiful landing pages to help Moroccan and international e-commerce sellers maximize their profits.
+                    </p>
+                </div>
+
+                <!-- Quick links -->
+                <div>
+                    <h4 class="text-xs font-bold text-white uppercase tracking-widest mb-4" id="footer-links-title">Quick Navigation</h4>
+                    <ul class="space-y-2 text-xs font-semibold text-zinc-400">
+                        <li><a href="#features" class="hover:text-brand-red transition-all-300" id="footer-features">Features</a></li>
+                        <li><a href="#simulator" class="hover:text-brand-red transition-all-300" id="footer-simulator">Simulator</a></li>
+                        <li><a href="#calculator" class="hover:text-brand-red transition-all-300" id="footer-calculator">ROI Calculator</a></li>
+                        <li><a href="#pricing" class="hover:text-brand-red transition-all-300" id="footer-pricing">Pricing Plans</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact & Legal -->
+                <div>
+                    <h4 class="text-xs font-bold text-white uppercase tracking-widest mb-4" id="footer-contact-title">Contact & Support</h4>
+                    <ul class="space-y-2 text-xs font-semibold text-zinc-400">
+                        <li>📧 support@sawab.agency</li>
+                        <li>💬 WhatsApp: +212 600 000000</li>
+                        <li id="footer-hours">🕒 Mon - Sat: 9:00 AM - 6:00 PM</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Bottom Copyright & Admin quick entrance -->
+            <div class="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-zinc-500 font-medium">
+                <div>
+                    &copy; 2026 SAWAB AGENCY. All rights reserved. Made for max conversions.
+                </div>
+                
+                <div class="flex gap-4">
+                    <button onclick="openAdminModal()" class="hover:text-brand-red transition-all-300 flex items-center gap-1.5">
+                        🛡️ <span id="footer-admin-btn">Owner Dashboard</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================ -->
+    <!-- INTERACTIVE LEAD SUCCESS MODAL -->
+    <!-- ============================================ -->
+    <div id="success-modal" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-zinc-900 border border-brand-red/40 rounded-3xl p-6 sm:p-8 max-w-md w-full text-center space-y-6 animate-scaleUp">
+            <div class="w-16 h-16 bg-brand-red/10 border-2 border-brand-red text-brand-red text-3xl rounded-full flex items-center justify-center mx-auto">
+                🎉
+            </div>
+            <div class="space-y-2">
+                <h3 class="text-2xl font-black text-white" id="modal-success-title">Order Received Successfully!</h3>
+                <p class="text-xs sm:text-sm text-zinc-400 font-light" id="modal-success-subtitle">Your customized order has been saved locally. We have also opened your WhatsApp to discuss project details directly.</p>
+            </div>
+            
+            <div class="bg-zinc-950 p-4 rounded-xl text-left border border-white/5 space-y-2 text-xs font-mono text-zinc-400">
+                <div class="flex justify-between">
+                    <span id="modal-field-name">Client Name:</span>
+                    <span class="text-white font-bold" id="modal-val-name">Tarik</span>
+                </div>
+                <div class="flex justify-between">
+                    <span id="modal-field-phone">Phone Number:</span>
+                    <span class="text-white font-bold" id="modal-val-phone">0612345678</span>
+                </div>
+                <div class="flex justify-between">
+                    <span id="modal-field-price">Calculated Price:</span>
+                    <span class="text-brand-red font-bold" id="modal-val-price">899 DH</span>
+                </div>
+            </div>
+
+            <div class="flex flex-col gap-2">
+                <button onclick="closeSuccessModal()" class="bg-brand-red hover:bg-brand-darkRed text-white text-xs sm:text-sm font-extrabold py-3.5 px-4 rounded-xl transition-all-300 shadow-lg shadow-brand-red/20" id="modal-btn-close">
+                    Close & Return
+                </button>
+                <a href="#" id="modal-whatsapp-direct" class="bg-zinc-950 border border-white/10 hover:border-brand-red text-zinc-300 hover:text-white text-xs py-2 px-4 rounded-lg transition-all-300" target="_blank">
+                    💬 Direct WhatsApp Chat
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- SECURE ADMIN DASHBOARD MODAL -->
+    <!-- ============================================ -->
+    <div id="admin-modal" class="hidden fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-4">
+        <div class="bg-zinc-900 border border-white/10 rounded-3xl p-6 sm:p-8 max-w-4xl w-full text-zinc-200 space-y-6 overflow-hidden max-h-[90vh] flex flex-col justify-between">
+            
+            <!-- Admin Header -->
+            <div class="flex justify-between items-center border-b border-white/10 pb-4">
+                <div class="flex items-center gap-3">
+                    <span class="text-2xl">🛡️</span>
+                    <div>
+                        <h3 class="text-lg font-black text-white" id="admin-header-title">SAWAB Leads & CRM Portal</h3>
+                        <span class="block text-[10px] text-zinc-400 uppercase tracking-widest font-bold">Secure Local Dashboard</span>
+                    </div>
+                </div>
+                <button onclick="closeAdminModal()" class="text-zinc-400 hover:text-brand-red text-xl font-bold p-1">✕</button>
+            </div>
+
+            <!-- Password Protection Screen -->
+            <div id="admin-passcode-screen" class="space-y-4 py-8 text-center max-w-sm mx-auto">
+                <label class="block text-xs font-bold text-zinc-400 uppercase tracking-widest" id="admin-lbl-pin">Enter Security Admin PIN</label>
+                <input type="password" id="admin-pin-input" class="w-full bg-zinc-950 border border-white/10 rounded-xl p-3.5 text-center text-xl tracking-widest focus:outline-none focus:border-brand-red text-white" placeholder="••••">
+                <p class="text-[10px] text-zinc-500" id="admin-pin-desc">For testing, use the preset PIN code: <span class="text-brand-red font-bold">2026</span></p>
+                <button onclick="checkAdminPasscode()" class="w-full bg-brand-red hover:bg-brand-darkRed text-white font-extrabold py-3 px-4 rounded-xl text-sm tracking-wider transition-all-300 shadow-lg shadow-brand-red/20" id="admin-btn-verify">
+                    Verify Passcode
+                </button>
+            </div>
+
+            <!-- Leads Database Screen (Hidden by default) -->
+            <div id="admin-leads-screen" class="hidden space-y-4 flex-1 overflow-y-auto min-h-[300px]">
+                <div class="flex justify-between items-center bg-zinc-950 p-4 rounded-xl border border-white/5 text-xs font-semibold text-zinc-400">
+                    <div class="flex items-center gap-2">
+                        <span id="admin-crm-lbl">Total Registered Orders:</span>
+                        <span id="admin-count-badge" class="bg-brand-red text-white font-black px-2.5 py-0.5 rounded-full">0</span>
+                    </div>
+                    <div class="flex gap-2">
+                        <button onclick="exportLeadsCSV()" class="bg-zinc-900 border border-white/10 hover:border-white/30 text-white py-1 px-3 rounded-lg hover:text-brand-red transition-all-300">
+                            📥 Export CSV
+                        </button>
+                        <button onclick="clearAllLeads()" class="bg-brand-red/10 border border-brand-red/20 hover:bg-brand-red text-brand-red hover:text-white py-1 px-3 rounded-lg transition-all-300">
+                            🗑️ Delete All Leads
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Leads Table -->
+                <div class="overflow-x-auto border border-white/5 rounded-xl bg-zinc-950">
+                    <table class="w-full text-left text-xs border-collapse">
+                        <thead>
+                            <tr class="bg-zinc-900/80 border-b border-white/10 text-zinc-400 font-extrabold uppercase tracking-wider">
+                                <th class="p-4" id="tbl-col-date">Date</th>
+                                <th class="p-4" id="tbl-col-name">Name</th>
+                                <th class="p-4" id="tbl-col-phone">Phone</th>
+                                <th class="p-4" id="tbl-col-niche">Business Niche</th>
+                                <th class="p-4" id="tbl-col-plan">Plan</th>
+                                <th class="p-4" id="tbl-col-price">Total Price</th>
+                                <th class="p-4 text-center" id="tbl-col-actions">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="admin-leads-tbody" class="divide-y divide-white/5 text-zinc-300">
+                            <!-- Populated dynamically via JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- ============================================ -->
+    <!-- CORE JAVASCRIPT SYSTEM -->
+    <!-- ============================================ -->
+    <script>
+        // MULTILINGUAL DICTIONARY SYSTEM
+        const translations = {
+            ar: {
+                direction: 'rtl',
+                announcement: '🔥 عرض خاص لرمضان والتجارة الإلكترونية: خصم 30% على جميع باقات لاندينغ بيج! ',
+                logoSub: 'وكالة صفحات الهبوط الاحترافية',
+                navFeatures: 'المميزات',
+                navSimulator: 'المحاكي المباشر',
+                navCalculator: 'حاسبة الأرباح',
+                navPricing: 'الأسعار والباقات',
+                navFaq: 'الأسئلة الشائعة',
+                navCta: 'أطلب دابا',
+                mobFeatures: 'المميزات',
+                mobSimulator: 'المحاكي المباشر',
+                mobCalculator: 'حاسبة الأرباح',
+                mobPricing: 'الباقات والأسعار',
+                mobFaq: 'الأسئلة الشائعة',
+                mobCta: 'أطلب دابا',
+                heroBadge: '⚡ صفحات هبوط برمجية حصرية سريعة جداً',
+                heroTitle: 'كنصاوبو <span class="text-brand-red text-glow">لاندينغ بيج</span> ديال بصح كتجيب المبيعات بحال الخيال',
+                heroSubtitle: 'مكتوبة ومبرمجة من الصفر باستخدام الأكواد النظيفة (HTML, CSS, JS). زيرو قوالب ثقيلة بحال ووردبريس ولا إليمينتور. سرعة فائقة تضمن إقناع أي زائر بالشراء وتخفيض تكلفة الإعلانات بشكل خيالي.',
+                heroStatSpeed: 'أقل من 0.5 ثانية',
+                heroStatSpeedLbl: 'سرعة التحميل',
+                heroStatConversions: '+250%',
+                heroStatConversionsLbl: 'زيادة المبيعات',
+                heroStatScoreLbl: 'مقياس الهواتف',
+                heroCtaPrimary: 'صاوب الصفحة ديالي دابا',
+                heroCtaSecondary: '⚡ جرب المحاكي المباشر',
+                heroMockupUrl: 'sawab.agency/my-store',
+                heroGaugeDesc: 'بينما القوالب العادية كتاخد كثر من 4 ثواني باش تفتح، صفحات صواب كتخدم فالبلاصة (0.3 ثانية) باش ما تضيع حتى شي كليان!',
+                logSpeedIndex: '⚡ مؤشر السرعة:',
+                logFcp: '🚀 أول رسم للمحتوى:',
+                logWeight: '📦 حجم الملفات الأساسية:',
+                sliderTitle: 'الفرق الرهيب في سرعة التحميل والتحويل',
+                sliderSubtitle: 'حرك الشريط لمقارنة المنصات العادية البطيئة مع الكود البرمجي الخفيف والسريع لوكالة صواب.',
+                sliderTagBefore: 'المنصات والقوالب العادية (Shopify / Elementor)',
+                sliderHeaderBefore: 'ثقيلة، عامرة أكواد زائدة وكتضيع ليك الكليان',
+                sliderCol1Lbl: 'تنقيط الهاتف',
+                sliderCol2Lbl: 'وقت التحميل',
+                sliderDescBefore: '⚠️ %53 من مستخدمي الهاتف كيغادرو المواقع اللي كتعطل كثر من 3 ثواني باش تفتح!',
+                sliderTagAfter: 'أكواد صواب البرمجية الحصرية',
+                sliderHeaderAfter: 'سرعة فائقة مخصصة لإقناع الزبون بالشراء فورا',
+                sliderCol3Lbl: 'تنقيط الهاتف',
+                sliderCol4Lbl: 'وقت التحميل',
+                sliderDescAfter: '🚀 ضاعف المبيعات ديالك دابا بأقل تكلفة إعلانية ممكنة على تيك توك وفيسبوك وسناب شات!',
+                simBadge: '🎨 صاوب لاندينغ بيج ديال أحلامك دابا',
+                simTitle: 'محاكي ومصمم صفحات الهبوط التفاعلي المباشر',
+                simSubtitle: 'ركب أقسام لاندينغ بيج ديالك دابا بيدك! غير الألوان، اختار الأقسام المناسبة، وشوف كيفاش غادي تظهر فالهاتف والكمبيوتر بشكل سريع واحترافي بزاف.',
+                simSidebarTitle: '🔧 خيارات الصفحة والمظهر',
+                simColorLbl: 'لون المظهر الأساسي',
+                simSectionsLbl: 'تفعيل/إيقاف الأقسام',
+                simToggleHero: 'واجهة البداية (Hero Header)',
+                simToggleProof: 'شريط الضمان والمصداقية',
+                simToggleFeatures: 'ميزات وخصائص المنتج',
+                simToggleReviews: 'آراء وتقييمات المشترين',
+                simToggleOrder: 'استمارة الدفع عند الاستلام',
+                simPresetLbl: 'قوالب جاهزة حسب تخصصك',
+                simPresetCod: '📦 الدفع عند الاستلام',
+                simPresetLead: '🎯 جمع المعلومات والزبناء',
+                simOrderBtn: '🛒 صاوب ليا بحال هاد التنسيق تماماً',
+                simPreviewLbl: 'معاينة تفاعلية حية ومباشرة',
+                simModeDesktop: '🖥️ حاسوب',
+                simModeMobile: '📱 هاتف',
+                simInnerTag: '🔥 العرض الأكثر مبيعاً بالمغرب',
+                simInnerTitle: 'اكتب هنا عنوان المنتج الرائع والمغري للشراء',
+                simInnerSubtitle: 'اشرح هنا أكبر فائدة ووعد كيقدمو المنتج ديالك للزبون. اقنع المشتري في بضعة أسطر.',
+                simInnerCta: 'اضغط هنا للطلب - اشتري 1 واحصل على 1 مجاناً',
+                simInnerFeaturesTitle: 'علاش الزبناء كيثيقو فينا؟',
+                simInnerFeat1Title: 'جودة صناعية عالية وممتازة',
+                simInnerFeat1Desc: 'منتج مصمم ليدوم طويلاً بمعايير عالمية مقاومة للتلف.',
+                simInnerFeat2Title: 'ضمان استرجاع الأموال 100%',
+                simInnerFeat2Desc: 'ثقتكم تهمنا، نوفر ضمان كامل لمدة 30 يوم دون تعقيدات.',
+                simInnerReviewText: '"صاوبت لاندينغ بيج مع صواب والمبيعات ديالي تضاعفو بشكل خيالي! الصفحة خفيفة بزاف وفورم الطلب كياخد 5 ثواني. الكليان كيشري بسهولة كبيرة."',
+                simInnerReviewAuthor: '— أحمد ك.، صاحب علامة تجارية إلكترونية (الدار البيضاء)',
+                simInnerFormBadge: '🔥 تبقى كمية محدودة جداً في المخزون',
+                simInnerFormTitle: 'استمارة الطلب - الدفع عند الاستلام',
+                simInnerLblName: 'الاسم الكامل ديالك',
+                simInnerLblPhone: 'رقم الواتساب للتواصل',
+                simInnerFormBtn: 'تأكيد الطلب دابا (الدفع عند الاستلام)',
+                featBadge: '⚙️ شنو كنقدمو ليك',
+                featTitle: 'علاش البرمجة الخاصة أحسن بمليار مرة من منصات التصميم العادية؟',
+                featSubtitle: 'ما كنخدموش بووردبريس ولا برامج التصميم الثقيلة. كنكتبو كود نظيف وسريع جداً. هاهو شنو غادي تربح معنا:',
+                feat1Title: 'السرعة القصوى الفائقة',
+                feat1Desc: 'صفحاتك كتفتح فبضعة أجزاء من الثانية. السرعة كتخلي الزبون ما يهربش وتكلفة الإعلانات كطيح بشكل ملحوظ.',
+                feat2Title: 'كتابة نصوص تسويقية مقنعة',
+                feat2Desc: 'الفريق ديالنا كيكتب نصوص إعلانية مقنعة بالدارجة، العربية، الفرنسية، أو الإنجليزية كتخاطب عقلية المشتري وكتزيد الأرباح.',
+                feat3Title: 'ربط بيكسل والـ API بدون مشاكل',
+                feat3Desc: 'كنربطو بيكسل فيسبوك، تيك توك، وسناب شات مع الـ Conversion API باش التتبع يكون 100% دقيق وميضيع ليك حتى إيفينت.',
+                feat4Title: 'فورم طلبات متطورة وسريعة',
+                feat4Desc: 'استمارات طلب ذكية مرتبطة بـ Google Sheets، نظام إدارة الطلبات CRM، والواتساب فالحين واللحظة.',
+                feat5Title: 'دعم كامل لتعدد اللغات',
+                feat5Desc: 'تواصل مع الكليان باللغة اللي بغاو. لاندينغ بيج كتحول فالحين بين الدارجة، العربية الفصحى، الفرنسية، والإنجليزية.',
+                feat6Title: 'استضافة مجانية مدى الحياة',
+                feat6Desc: 'مكاينش اشتراكات شهرية. كنستضيفو الأكواد ديالك فمنصات سحابية آمنة وبسرعة فائقة مقابل 0 درهم للشهر مدى الحياة.',
+                calcBadge: '💰 حاسبة الأرباح التفاعلية',
+                calcTitle: 'شحال ديال الفلوس غادي تزيد فالحساب ديالك؟',
+                calcSubtitle: 'أغلب التجار كيضيعو كثر من 60% من ميزانية الإشهار فصفحات تقال. شوف شحال تقدر تزيد فالأرباح اليومية ديالك بالسرعة والاتقان ديال صواب.',
+                calcInputTitle: '📊 دخل الأرقام ديال المتجر ديالك دابا',
+                calcLblVisitors: 'عدد زوار المتجر يومياً',
+                calcValVisitors: '1,500 زائر',
+                calcLblAov: 'ثمن البيع ديال المنتج (بالدرهم)',
+                calcValAov: '250 درهم',
+                calcLblCr: 'نسبة التحويل الحالية عندك',
+                calcValCr: '1.2%',
+                calcComparisonBadge: '⚡ محاكاة مقارنة الأرباح',
+                calcLblCurrentRev: 'المبيعات اليومية الحالية ديالك',
+                calcCurrentSales: '4,500 درهم',
+                calcCurrentOrders: '18 طلبية',
+                calcLblSawabRev: 'مبيعاتك اليومية المتوقعة مع صواب',
+                calcSawabSales: '15,000 درهم',
+                calcSawabOrders: '60 طلبية (بنسبة تحويل 4%)',
+                calcLblExtra: 'الأرباح الإضافية الشهرية المحتملة',
+                calcExtraProfit: '+ 315,000 درهم',
+                calcFooterDesc: 'العملية تفترض نسبة تحويل متوسطة تبلغ 4% بفضل لاندينغ بيج احترافية وسريعة من صواب.',
+                calcCta: '🚀 ضاعف الأرباح والمبيعات ديالي دابا',
+                priceBadge: '💳 أسعار صريحة وبدون مفاجآت',
+                priceTitle: 'اختار الباقة المناسبة للنجاح ديالك',
+                priceSubtitle: 'مكاينش مبالغ شهرية ولا فواتير استضافة. كتخلص مرة وحدة وكتبقى الصفحة ديالك مدى الحياة. اختار باقتك دابا.',
+                planStarterTitle: 'باقة المبتدئين في COD',
+                planStarterDesc: 'مناسبة جداً لتجربة منتج واحد محلياً بأقل تكلفة ممكنة وبسرعة برمجية ممتازة.',
+                planStarterPrice: '499 درهم',
+                planStarterOnce: '/ لمرة واحدة فقط',
+                planStarterFeat1: 'صفحة هبوط مبرمجة بالكامل من الصفر',
+                planStarterFeat2: 'سرعة خارقة في التحميل (0.4 ثانية)',
+                planStarterFeat3: 'متوافقة بالكامل مع الهواتف واللوحات',
+                planStarterFeat4: 'ربط بيكسل واحد (فيسبوك أو تيك توك)',
+                planStarterFeat5: 'ربط استمارة الطلب لإرسال المعلومات',
+                planStarterBtn: 'اختار باقة المبتدئين',
+                planProTag: 'الأكثر طلباً بالمغرب',
+                planProTitle: 'باقة المحترفين (E-com Scale)',
+                planProDesc: 'للبراندات الجادة اللي باغية نصوص تسويقية احترافية وتتبع دقيق وشامل لأكثر من بيكسل.',
+                planProPrice: '899 درهم',
+                planProOnce: '/ لمرة واحدة فقط',
+                planProFeat1: 'تصميم احترافي مخصص ومبهر',
+                planProFeat2: 'سرعة خارقة في التحميل (0.3 ثانية)',
+                planProFeat3: 'كتابة نصوص تسويقية بالدارجة والفرنسية',
+                planProFeat4: 'ربط متعدد للبيكسل والـ API لتتبع دقيق',
+                planProFeat5: 'ربط مباشر مع Google Sheets لتلقي الطلبات',
+                planProFeat6: 'صفحة الشكر احترافية مع عرض إضافي (Upsell)',
+                planProBtn: 'اختار باقة المحترفين',
+                planEliteTitle: 'الباقة المتكاملة (Elite Funnel)',
+                planEliteDesc: 'للمتاجر الكبرى والشركات التي تبحث عن برمجيات متقدمة مع دومين مجاني ودعم مميز.',
+                planElitePrice: '1,799 درهم',
+                planEliteOnce: '/ لمرة واحدة فقط',
+                planEliteFeat1: 'عدة صفحات هبوط متصلة ببعضها (Funnel)',
+                planEliteFeat2: 'صفحة متعددة اللغات بالكامل (بلمسة واحدة)',
+                planEliteFeat3: 'إعداد وحجز اسم نطاق مجاني (.com / .ma)',
+                planEliteFeat4: 'استضافة سحابية سريعة ومجانية مدى الحياة',
+                planEliteFeat5: 'دعم فني خاص وإصلاحات مجانية لمدة سنة',
+                planEliteBtn: 'اختار الباقة المتكاملة',
+                configTitle: '🛠️ خصص الطلب ديالك وعمر المعلومات',
+                configSubtitle: 'تقدر تفعل ميزات إضافية وتشوف الثمن النهائي كيتغير دابا فالحين. عمر الاستمارة لتأكيد الطلب عبر الواتساب.',
+                configAddonLbl: 'إضافات مميزة ومفيدة',
+                addonCopyTitle: 'كتابة نصوص إعلانية احترافية',
+                addonCopyDesc: 'نصوص تسويقية تثير العاطفة وتدفع الزائر للشراء فورا.',
+                addonSpeedTitle: 'تسليم سريع جداً في 24 ساعة',
+                addonSpeedDesc: 'عطي الأولوية للمشروع ديالك باش يسالي فنهار واحد.',
+                addonDomainTitle: 'حجز وإعداد اسم نطاق (.ma / .com)',
+                addonDomainDesc: 'حنا نكلفو بحجز الدومين ديالك وربطه بالصفحة.',
+                addonUpsellTitle: 'صفحة عروض إضافية (Upsell)',
+                addonUpsellDesc: 'صفحة شكر ذكية كتقترح على الزبون عرض إضافي لزيادة الأرباح.',
+                configFormLbl: 'معلومات المشتري',
+                formPlanLbl: 'الباقة المختارة حالياً:',
+                formTotalLbl: 'المجموع الإجمالي التقريبي',
+                formTotalPrice: '899 درهم',
+                btnSubmitText: 'أرسل الطلب وتحدث معي في واتساب',
+                lblFullname: 'الاسم الكامل ديالك *',
+                lblPhone: 'رقم الواتساب للتواصل *',
+                lblNiche: 'نوع المنتج أو مجال التجارة ديالك *',
+                testBadge: '💬 شهادات وآراء العملاء',
+                testTitle: 'تجار مغاربة تضاعفو مبيعاتهم بفضل صواب',
+                testSubtitle: 'اقرأ آراء حقيقية وموثقة لأصحاب مشاريع ومسوقين بدلوا صفحاتهم العادية البطيئة بكود صواب الاحترافي.',
+                review1Body: '"كنت خدام بشوبيفاي، وكان مقياس الهاتف عندي 28. تكلفة المبيعة كانت غالية بزاف حيت الكليان كيمشي قبل ما تحل الصفحة. ملي صاوبولي صواب صفحة برمجية خاصة، نسبة المبيعات طلعات من 1.5% لـ 4.3%! وفرت آلاف الدراهم فالأشهار!"',
+                review2Body: '"الميزة ديال تحويل اللغة فالحين رائعة جداً. بزاف دالكليان فالمغرب كيفضلو يقراو بالفرنسية، ووحدين آخرين بالدارجة. محاكي لاندينغ بيج عاوني بزاف نحدد التنسيق اللي بغيت. خدمة سريعة وتواصل ممتاز."',
+                review3Body: '"خدمة في المستوى. مكاينش فواتير شهرية ديال شوبيفاي ولا إليمينتور. صاوبو ليا الصفحة ديالي واستضافوها فابور مدى الحياة. الربط مع جوجل شيت والواتساب خدام بسلاسة فائقة، والتسليم قل من 24 ساعة!"',
+                faqBadge: '❓ الأسئلة المتكررة الشائعة',
+                faqTitle: 'عندك أسئلة؟ حنا هنا للإجابة عليها بكل وضوح',
+                faqSubtitle: 'إجابات صريحة ومباشرة باش تفهم كيفاش كتخدم الخدمة والبرمجة ديالنا.',
+                faqQ1: 'شحال كيكلفني ثمن الاستضافة الشهرية لصفحتي؟',
+                faqA1: '0 درهم للشهر. نظراً لأننا نقوم ببرمجة صفحتك بالكامل باستخدام كود نظيف، يمكننا استضافتها في خوادم سحابية فائقة السرعة مدى الحياة ومجاناً. لن تدفع أي سنتيم كاشتراك شهري.',
+                faqQ2: 'واش خاص يكون عندي اسم نطاق (دومين) خاص بيا؟',
+                faqA2: 'نعم، كتحتاج اسم نطاق (بحال store.com أو store.ma) باش يدخلوا ليه الكليان. إذا كان عندك واجد، كنربطوه فابور بالصفحة. وإذا مكانش عندك، تقدر تشريه ولا تختار إضافة حجز الدومين وحنا نكلفو بكلشي.',
+                faqQ3: 'شحال كتاخد الصفحة ديال الوقت باش توجد؟',
+                faqA3: 'التسليم العادي كيكون فقل من 48 ساعة. وإذا اختاريتي إضافة "التسليم السريع في 24 ساعة"، كنعطيو الأولوية القصوى للمشروع ديالك باش يسالي فقل من نهار واحد من مورا ما تعطينا معلومات المنتج.',
+                faqQ4: 'كيفاش غادي نتلقى الطلبات اللي كيسجلوها الناس فصفحتي؟',
+                faqA4: 'كنوفروا بزاف د الطرق حسب الاختيار ديالك. نقدروا نربطوا الاستمارة مباشرة مع Google Sheets (كتظهر الطلبية فالحين)، أو كتحول نيشان للواتساب برسالة مجهزة، أو هما بجوج باش تتبع المبيعات بسهولة.',
+                faqQ5: 'شنو هي طرق الدفع المتوفرة والمقبولة عندكم؟',
+                faqA5: 'كنقبلوا التحويل البنكي المباشر (CIH Bank, Attijariwafa, BCP)، التحويل الدولي (Wise, PayPal)، أو العملات الرقمية (USDT). العمل على المشروع كيبدا مباشرة بعد تأكيد عملية الدفع.',
+                footerLinksTitle: 'روابط تصفح سريعة',
+                footerContactTitle: 'اتصل بنا والدعم الفني',
+                footerHours: '🕒 من الإثنين إلى السبت: 9:00 صباحاً - 6:00 مساءً',
+                footerAdminBtn: 'لوحة تحكم صاحب الموقع',
+                modalSuccessTitle: 'تم إرسال طلبك بنجاح وسرعة! 🎉',
+                modalSuccessSubtitle: 'تم حفظ تفاصيل الطلب والتخصيص ديالك محلياً في خوادمنا. قمنا أيضاً بفتح تطبيق الواتساب لمناقشة تفاصيل المشروع والبدء فوراً.',
+                modalFieldName: 'اسم الزبون:',
+                modalFieldPhone: 'رقم الهاتف:',
+                modalFieldPrice: 'الثمن الإجمالي للطلب:',
+                modalBtnClose: 'إغلاق والرجوع للصفحة',
+                adminHeaderTitle: 'بوابة إدارة طلبات صواب (CRM)',
+                adminLblPin: 'دخل الكود السري ديال المشرف دابا',
+                adminPinDesc: 'لأغراض التجريب واختبار الخدمة، استخدم الكود السري التلقائي: 2026',
+                adminBtnVerify: 'تحقق من الكود السري',
+                adminCrmLbl: 'مجموع الطلبات المسجلة محلياً:',
+                tblColDate: 'التاريخ',
+                tblColName: 'الاسم الكامل',
+                tblColPhone: 'رقم الهاتف',
+                tblColNiche: 'مجال التجارة / المنتج',
+                tblColPlan: 'الباقة',
+                tblColPrice: 'المجموع الإجمالي',
+                tblColActions: 'إجراءات تواصل'
+            },
+            fr: {
+                direction: 'ltr',
+                announcement: '🔥 Offre Spéciale Ramadan & E-com : -30% sur la création de toutes vos Landing Pages !',
+                logoSub: 'AGENCE DE CONVERSION',
+                navFeatures: 'Fonctionnalités',
+                navSimulator: 'Simulateur Live',
+                navCalculator: 'Calculateur ROI',
+                navPricing: 'Tarifs',
+                navFaq: 'FAQ',
+                navCta: 'Commander',
+                mobFeatures: 'Fonctionnalités',
+                mobSimulator: 'Simulateur Live',
+                mobCalculator: 'Calculateur ROI',
+                mobPricing: 'Baqas & Tarifs',
+                mobFaq: 'FAQ',
+                mobCta: 'Commander dabas',
+                heroBadge: '⚡ LANDING PAGES SUR-MESURE ULTRA RAPIDES',
+                heroTitle: 'Des Landing Pages Qui Explosent Littéralement Vos Ventes.',
+                heroSubtitle: 'Conçues entièrement sur-mesure à base d\'HTML, CSS, et JS. Aucun CMS lourd comme WordPress ou Elementor. Un score de vitesse de 99% qui convertit chaque visiteur en acheteur en quelques millisecondes. Idéal pour le E-com et le COD.',
+                heroStatSpeed: '< 0.5s',
+                heroStatSpeedLbl: 'Temps de charge',
+                heroStatConversions: '+250%',
+                heroStatConversionsLbl: 'Taux de conversion',
+                heroStatScoreLbl: 'Score Mobile',
+                heroCtaPrimary: 'Obtenir ma page maintenant',
+                heroCtaSecondary: '⚡ Essayer le simulateur',
+                heroMockupUrl: 'sawab.agency/my-store',
+                heroGaugeDesc: 'Pendant que les constructeurs de pages standard mettent plus de 4 secondes à charger, les pages de Sawab s\'affichent instantanément (0,3s) évitant de perdre de précieux clients !',
+                logSpeedIndex: '⚡ Index de vitesse:',
+                logFcp: '🚀 Premier rendu de contenu:',
+                logWeight: '📦 Poids du bundle initial:',
+                sliderTitle: 'La différence brutale de vitesse',
+                sliderSubtitle: 'Faites glisser le curseur pour comparer les constructeurs standards lourds avec notre code épuré.',
+                sliderTagBefore: 'Constructeurs Standard (Shopify / Elementor)',
+                sliderHeaderBefore: 'Lents, lourds et perte massive de prospects',
+                sliderCol1Lbl: 'Score Mobile',
+                sliderCol2Lbl: 'Temps de charge',
+                sliderDescBefore: '⚠️ 53% des visiteurs mobiles quittent un site qui met plus de 3 secondes à charger !',
+                sliderTagAfter: 'CODE SUR-MESURE SAWAB',
+                sliderHeaderAfter: 'Rendu instantané optimisé pour convaincre',
+                sliderCol3Lbl: 'Score Mobile',
+                sliderCol4Lbl: 'Temps de charge',
+                sliderDescAfter: '🚀 Maximisez instantanément vos ventes et baissez vos coûts publicitaires sur TikTok, FB, Snapchat !',
+                simBadge: '🎨 CRÉEZ LA PAGE DE VOS RÊVES',
+                simTitle: 'Simulateur de Landing Page Interactif',
+                simSubtitle: 'Assemblez votre mise en page en temps réel ! Sélectionnez vos sections, modifiez la couleur de fond et prévisualisez la réactivité exceptionnelle et le rendu mobile de votre future page codée par Sawab.',
+                simSidebarTitle: '🔧 Paramètres de la page',
+                simColorLbl: 'Couleur d\'accentuation',
+                simSectionsLbl: 'Activer/Désactiver les sections',
+                simToggleHero: 'En-tête de démarrage (Hero)',
+                simToggleProof: 'Bandeau de crédibilité & Garanties',
+                simToggleFeatures: 'Avantages & Caractéristiques',
+                simToggleReviews: 'Avis & Témoignages clients',
+                simToggleOrder: 'Formulaire de commande COD',
+                simPresetLbl: 'Modèles rapides par niche',
+                simPresetCod: '📦 E-commerce COD',
+                simPresetLead: '🎯 Collecte de Prospects',
+                simOrderBtn: '🛒 Commander exactement cette mise en page',
+                simPreviewLbl: 'Aperçu Interactif en Temps Réel',
+                simModeDesktop: '🖥️ Bureau',
+                simModeMobile: '📱 Mobile',
+                simInnerTag: '🔥 Meilleure offre de vente',
+                simInnerTitle: 'Saisissez ici le titre irrésistible de votre produit',
+                simInnerSubtitle: 'Expliquez la plus grande promesse de votre produit physique ou service. Convainquez le visiteur en quelques lignes accrocheuses.',
+                simInnerCta: 'Commander maintenant - 1 acheté = 1 gratuit',
+                simInnerFeaturesTitle: 'Pourquoi nos clients nous choisissent',
+                simInnerFeat1Title: 'Matériaux de qualité premium',
+                simInnerFeat1Desc: 'Conçu avec des normes rigoureuses pour assurer une durabilité maximale.',
+                simInnerFeat2Title: 'Garantie de satisfaction 100%',
+                simInnerFeat2Desc: 'Nous remboursons l\'intégralité sous 30 jours en cas d\'insatisfaction.',
+                simInnerReviewText: '"J\'ai fait développer ma page chez Sawab et mes ventes ont explosé ! Les clients adorent la rapidité du site et le formulaire se remplit en 5 secondes. Idéal pour le marché marocain."',
+                simInnerReviewAuthor: '— Ahmed K., Fondateur E-commerce (Casablanca)',
+                simInnerFormBadge: '🔥 Stock très limité disponible',
+                simInnerFormTitle: 'Formulaire de commande - Paiement Cash',
+                simInnerLblName: 'Votre Nom Complet',
+                simInnerLblPhone: 'Numéro de téléphone WhatsApp',
+                simInnerFormBtn: 'Confirmer ma commande maintenant (Payez Cash)',
+                featBadge: '⚙️ NOS AVANTAGES',
+                featTitle: 'Pourquoi notre code sur-mesure surpasse tous les constructeurs standard ?',
+                featSubtitle: 'Nous n\'utilisons aucun outil lourd. Nous codons chaque projet pour vous offrir des performances inégalées au Maroc.',
+                feat1Title: 'Optimisation de vitesse extrême',
+                feat1Desc: 'Votre page charge en moins de 0.5s. La vitesse réduit le taux de rebond, faisant baisser votre coût d\'acquisition publicitaire.',
+                feat2Title: 'Rédaction persuasive professionnelle',
+                feat2Desc: 'Notre équipe rédige des textes percutants en Darija, Français ou Anglais pour convaincre et inciter à l\'achat rapide.',
+                feat3Title: 'Intégration d\'API de Pixels précise',
+                feat3Desc: 'Pas de perte de données. Nous lions Facebook API, TikTok Pixel et Snapchat à la source pour optimiser vos campagnes.',
+                feat4Title: 'Formulaires COD Fluides',
+                feat4Desc: 'Des formulaires ultra-rapides qui envoient les prospects vers Google Sheets, des CRM ou WhatsApp en une seconde.',
+                feat5Title: 'Multi-langue instantané',
+                feat5Desc: 'Ciblez toutes les audiences. Vos visiteurs peuvent basculer entre la Darija, l\'Arabe, le Français et l\'Anglais instantanément.',
+                feat6Title: 'Hébergement gratuit à vie',
+                feat6Desc: 'Oubliez les abonnements mensuels. Nous hébergeons votre code sur des serveurs cloud hautement sécurisés et ultra-rapides pour 0 DH par mois.',
+                calcBadge: '💰 CALCULATEUR DE REVENUS',
+                calcTitle: 'Combien d\'argent supplémentaire allez-vous générer ?',
+                calcSubtitle: 'Découvrez l\'impact immédiat d\'une page ultra-rapide sur votre rentabilité quotidienne en comparant votre taux actuel et notre taux moyen.',
+                calcInputTitle: '📊 Saisissez les données de votre boutique',
+                calcLblVisitors: 'Visiteurs quotidiens',
+                calcValVisitors: '1 500 visiteurs',
+                calcLblAov: 'Prix moyen du produit (DH)',
+                calcValAov: '250 DH',
+                calcLblCr: 'Taux de conversion actuel',
+                calcValCr: '1.2%',
+                calcComparisonBadge: '⚡ COMPARAISON DE RENDEMENT',
+                calcLblCurrentRev: 'Vos ventes quotidiennes actuelles',
+                calcCurrentSales: '4 500 DH',
+                calcCurrentOrders: '18 commandes',
+                calcLblSawabRev: 'Vos ventes quotidiennes avec Sawab',
+                calcSawabSales: '15 000 DH',
+                calcSawabOrders: '60 commandes (à 4% CR)',
+                calcLblExtra: 'Bénéfice supplémentaire mensuel potentiel',
+                calcExtraProfit: '+ 315 000 DH',
+                calcFooterDesc: 'Basé sur un taux de conversion estimé moyen de 4% grâce à nos techniques de vitesse et copywriting optimisé.',
+                calcCta: '🚀 AUGMENTER MON CHIFFRE D\'AFFAIRES',
+                priceBadge: '💳 TARIFS TRANSPARENTS ET UNIQUES',
+                priceTitle: 'Choisissez votre pack de réussite',
+                priceSubtitle: 'Pas d\'abonnement récurrent, pas de factures de constructeurs. Vous payez une seule fois, vous possédez le code à vie.',
+                planStarterTitle: 'Pack Débutant COD',
+                planStarterDesc: 'Parfait pour tester rapidement et à moindre coût un produit physique sur le marché local.',
+                planStarterPrice: '499 DH',
+                planStarterOnce: '/ paiement unique',
+                planStarterFeat1: '1 Page codée entièrement sur-mesure',
+                planStarterFeat2: 'Temps de chargement ultra-rapide (0.4s)',
+                planStarterFeat3: 'Design mobile-first responsive',
+                planStarterFeat4: 'Intégration d\'un Pixel (FB ou TikTok)',
+                planStarterFeat5: 'Formulaire de commande standard',
+                planStarterBtn: 'Choisir le pack Starter',
+                planProTag: 'Le plus populaire au Maroc',
+                planProTitle: 'Pack Pro (E-com Scale)',
+                planProDesc: 'Pour les e-commerçants sérieux exigeant une écriture persuasive haut de gamme et du multi-pixel.',
+                planProPrice: '899 DH',
+                planProOnce: '/ paiement unique',
+                planProFeat1: 'Design premium raffiné et sur-mesure',
+                planProFeat2: 'Temps de chargement ultra-rapide (0.3s)',
+                planProFeat3: 'Rédaction en Darija et Français incluse',
+                planProFeat4: 'Suivi multi-pixel & intégration API avancée',
+                planProFeat5: 'Liaison instantanée avec Google Sheets',
+                planProFeat6: 'Page de remerciement + Module de vente Upsell',
+                planProBtn: 'Choisir le pack Best Seller',
+                planEliteTitle: 'Pack Intégral Elite',
+                planEliteDesc: 'La totale pour les grandes marques et structures cherchant un funnel avancé complet avec domaine inclus.',
+                planElitePrice: '1 799 DH',
+                planEliteOnce: '/ paiement unique',
+                planEliteFeat1: 'Multiples pages connectées en Funnel',
+                planEliteFeat2: 'Page entièrement bilingue (Darija / Français)',
+                planEliteFeat3: 'Réservation & configuration de domaine (.ma/.com)',
+                planEliteFeat4: 'Serveur cloud ultra-rapide et gratuit à vie',
+                planEliteFeat5: 'Support prioritaire dédié pendant 1 an',
+                planEliteBtn: 'Choisir le pack Elite',
+                configTitle: '🛠️ Personnalisez votre commande et remplissez vos coordonnées',
+                configSubtitle: 'Ajoutez des options haut de gamme en temps réel et validez les détails de votre projet pour commander par WhatsApp.',
+                configAddonLbl: 'Options & Add-ons premium',
+                addonCopyTitle: 'Rédaction de textes publicitaires persuasifs',
+                addonCopyDesc: 'Des textes captivants rédigés pour déclencher l\'achat coup de cœur.',
+                addonSpeedTitle: 'Livraison express en 24 Heures',
+                addonSpeedDesc: 'Nous donnons la priorité absolue à votre projet en développement.',
+                addonDomainTitle: 'Configuration de nom de domaine (.ma / .com)',
+                addonDomainDesc: 'Achat, configuration complète et liaison technique.',
+                addonUpsellTitle: 'Page de vente incitative (Upsell)',
+                addonUpsellDesc: 'Une page de remerciement stratégique qui propose une offre additionnelle.',
+                configFormLbl: 'Coordonnées de l\'acheteur',
+                formPlanLbl: 'Plan sélectionné:',
+                formTotalLbl: 'Total Estimé',
+                formTotalPrice: '899 DH',
+                btnSubmitText: 'Commander & Discuter sur WhatsApp',
+                lblFullname: 'Votre Nom Complet *',
+                lblPhone: 'Numéro WhatsApp *',
+                lblNiche: 'Votre Niche de produit / business *',
+                testBadge: '💬 AVIS CLIENTS',
+                testTitle: 'Des taux de conversion doublés au Maroc',
+                testSubtitle: 'Découvrez les commentaires authentiques de vendeurs qui ont confié le développement de leur funnel à Sawab.',
+                review1Body: '"Je perdais énormément de clients sur Shopify à cause du temps de charge. Depuis que Sawab a codé ma page, mon taux de conversion est passé de 1,5% à 4,3% ! C\'est un énorme gain de budget publicitaire !"',
+                review2Body: '"L\'option de changement de langue est tout simplement magique au Maroc. Certains préfèrent lire en Français, d\'autres en Arabe. Excellent service, très rapide et à l\'écoute."',
+                review3Body: '"Aucun frais mensuel de Shopify, hébergement gratuit à vie. Ils ont connecté mes commandes à Google Sheets et WhatsApp. Service de grande qualité livré en moins de 24h."',
+                faqBadge: '❓ FAQ',
+                faqTitle: 'Vous avez des questions ? Nous y répondons clairement',
+                faqSubtitle: 'Des réponses directes pour vous rassurer sur notre processus technique de création.',
+                faqQ1: 'Combien coûte l\'hébergement mensuel de ma page ?',
+                faqA1: '0 DH par mois. Comme nous développons avec du code optimisé pur, nous hébergeons gratuitement votre page sur des plateformes cloud ultra-rapides et robustes à vie. Aucun frais récurrent.',
+                faqQ2: 'Dois-je posséder mon propre nom de domaine ?',
+                faqA2: 'Oui, vous avez besoin d\'un domaine (ex: matable.com) pour vos clients. Si vous en avez un, nous le connectons gratuitement. Sinon, nous pouvons l\'acheter et le configurer pour vous avec l\'add-on.',
+                faqQ3: 'Combien de temps prend la création d\'une page ?',
+                faqA3: 'La livraison prend moins de 48h. Si vous choisissez l\'option Express, nous finalisons votre landing page optimisée en moins de 24h après réception de vos éléments graphiques.',
+                faqQ4: 'Comment vais-je recevoir les commandes passées sur ma page ?',
+                faqA4: 'Nous configurons l\'envoi en temps réel. Les commandes peuvent s\'enregistrer automatiquement sur un fichier Google Sheets partagé, ou envoyer les détails de la vente sur votre WhatsApp.',
+                faqQ5: 'Quels sont les modes de paiement acceptés ?',
+                faqA5: 'Nous acceptons les virements bancaires nationaux (CIH, Attijari, BCP), Wise, PayPal et les crypto-monnaies (USDT). Le développement commence immédiatement après validation du paiement.',
+                footerLinksTitle: 'Liens utiles',
+                footerContactTitle: 'Contact & Support client',
+                footerHours: '🕒 Lun - Sam: 9h00 - 18h00',
+                footerAdminBtn: 'Tableau de bord propriétaire',
+                modalSuccessTitle: 'Commande reçue avec succès ! 🎉',
+                modalSuccessSubtitle: 'Votre projet a été enregistré dans notre base de données locale. Nous avons également ouvert WhatsApp pour débuter l\'analyse et la création immédiate.',
+                modalFieldName: 'Nom du client:',
+                modalFieldPhone: 'Téléphone:',
+                modalFieldPrice: 'Prix total calculé:',
+                modalBtnClose: 'Fermer et retourner',
+                adminHeaderTitle: 'Portail CRM & Commandes SAWAB',
+                adminLblPin: 'Saisissez le code PIN d\'administration',
+                adminPinDesc: 'Pour tester, utilisez le code PIN prédéfini : 2026',
+                adminBtnVerify: 'Vérifier le code PIN',
+                adminCrmLbl: 'Nombre total de leads locaux:',
+                tblColDate: 'Date',
+                tblColName: 'Nom complet',
+                tblColPhone: 'WhatsApp',
+                tblColNiche: 'Niche / Produit',
+                tblColPlan: 'Pack',
+                tblColPrice: 'Total Estimé',
+                tblColActions: 'Actions CRM'
+            },
+            en: {
+                direction: 'ltr',
+                announcement: '🔥 Ramadan & E-commerce Special Offer: 30% OFF on all packages!',
+                logoSub: 'CONVERSION AGENCY',
+                navFeatures: 'Features',
+                navSimulator: 'Live Simulator',
+                navCalculator: 'ROI Calculator',
+                navPricing: 'Pricing',
+                navFaq: 'FAQ',
+                navCta: 'Order Now',
+                mobFeatures: 'Features',
+                mobSimulator: 'Live Simulator',
+                mobCalculator: 'ROI Calculator',
+                mobPricing: 'Pricing Plans',
+                mobFaq: 'FAQ',
+                mobCta: 'Order Now',
+                heroBadge: '⚡ LIGHTNING-FAST CUSTOM CODED LANDING PAGES',
+                heroTitle: 'We Build <span class="text-brand-red text-glow">Landing Pages</span> That Explode Your Sales.',
+                heroSubtitle: 'Custom-coded from scratch using HTML, CSS, and JS. Zero bloated builders like Shopify or Elementor. Speed scores of 99% that convert visitors into buyers in milliseconds. Perfect for COD & E-commerce.',
+                heroStatSpeed: '< 0.5s',
+                heroStatSpeedLbl: 'Load Time',
+                heroStatConversions: '+250%',
+                heroStatConversionsLbl: 'Conversion Rate',
+                heroStatScoreLbl: 'Mobile Score',
+                heroCtaPrimary: 'Get My Page Now',
+                heroCtaSecondary: '⚡ Try Live Simulator',
+                heroMockupUrl: 'sawab.agency/my-store',
+                heroGaugeDesc: 'While standard builders take 4+ seconds to load, Sawab pages render instantly (0.3s) saving 90% of lost traffic!',
+                logSpeedIndex: '⚡ Speed Index:',
+                logFcp: '🚀 First Contentful Paint:',
+                logWeight: '📦 Bundle Size:',
+                sliderTitle: 'The Brutal Speed Difference',
+                sliderSubtitle: 'Drag the slider to compare standard online platforms (Elementor, Shopify themes) with our ultra-optimized custom HTML/CSS code.',
+                sliderTagBefore: 'Standard Builders (Shopify / Elementor)',
+                sliderHeaderBefore: 'Slow, Bloated & Losing Customers',
+                sliderCol1Lbl: 'Mobile Score',
+                sliderCol2Lbl: 'Load Time',
+                sliderDescBefore: '⚠️ 53% of mobile visitors leave websites that take over 3 seconds to load!',
+                sliderTagAfter: 'SAWAB CUSTOM CODE',
+                sliderHeaderAfter: 'Instant Render & Max Conversions',
+                sliderCol3Lbl: 'Mobile Score',
+                sliderCol4Lbl: 'Load Time',
+                sliderDescAfter: '🚀 Maximize conversions & minimize CPC on Facebook, TikTok, and Snapchat ads!',
+                simBadge: '🎨 BUILD YOUR DREAM LANDING PAGE',
+                simTitle: 'Live Landing Page Simulator',
+                simSubtitle: 'Create your layout right now! Select your sections, change the primary color, and preview how responsive, clean, and beautiful your custom Sawab landing page will look on mobile & desktop!',
+                simSidebarTitle: '🔧 Page Options',
+                simColorLbl: 'Accent Color',
+                simSectionsLbl: 'Toggle Sections',
+                simToggleHero: 'Hero Header',
+                simToggleProof: 'Social Proof Badge',
+                simToggleFeatures: 'Benefits & Features',
+                simToggleReviews: 'Customer Reviews',
+                simToggleOrder: 'COD Cash Form',
+                simPresetLbl: 'Niche Templates',
+                simPresetCod: '📦 COD E-com',
+                simPresetLead: '🎯 Lead Gen',
+                simOrderBtn: '🛒 Order This Exact Layout',
+                simPreviewLbl: 'LIVE INTERACTIVE MOCKUP',
+                simModeDesktop: '🖥️ Desktop',
+                simModeMobile: '📱 Mobile',
+                simInnerTag: '🔥 Best Selling Product',
+                simInnerTitle: 'Amazing Premium Product Title Here',
+                simInnerSubtitle: 'Describe the biggest promise of your physical e-commerce product or service. Instantly convince the client.',
+                simInnerCta: 'Order Now - Buy 1 Get 1 Free',
+                simInnerFeaturesTitle: 'Why Our Customers Love Us',
+                simInnerFeat1Title: 'Ultra High Quality Material',
+                simInnerFeat1Desc: 'Designed to last with premium industrial standards.',
+                simInnerFeat2Title: '100% Secure Guarantee',
+                simInnerFeat2Desc: 'Full 30-day money back guarantee with no questions asked.',
+                simInnerReviewText: '"Sawab built this page, and my e-commerce sales literally skyrocketed! Customers find it so fast and easy to purchase. The order form takes 5 seconds."',
+                simInnerReviewAuthor: '— Ahmed K., E-com Brand Owner (Casablanca)',
+                simInnerFormBadge: '🔥 Limited stock left',
+                simInnerFormTitle: 'Order Form - Cash On Delivery',
+                simInnerLblName: 'Your Full Name',
+                simInnerLblPhone: 'WhatsApp Phone Number',
+                simInnerFormBtn: 'Confirm My Order (Pay Cash)',
+                featBadge: '⚙️ WHAT WE DELIVER',
+                featTitle: 'Why Custom Code Beats Page Builders',
+                featSubtitle: 'We don\'t use WordPress, Elementor, or drag-and-drop templates. We write clean, custom HTML, CSS, and JS. Here is what that means for your brand.',
+                feat1Title: 'Extreme Speed Optimization',
+                feat1Desc: 'Your page loads under 0.5s. Fast pages prevent bounce rates, reducing your advertising cost per click and increasing orders instantly.',
+                feat2Title: 'Psychology-Backed Copywriting',
+                feat2Desc: 'Our team writes high-converting copy in Darija, Arabic, English, or French to address customer objections and double your ROI.',
+                feat3Title: 'Advanced Pixel Integrations',
+                feat3Desc: 'No tracking drop-off. We integrate Facebook API, TikTok Pixel, Snapchat, and Google Analytics without scripts slowing down the page.',
+                feat4Title: 'Interactive COD Order Forms',
+                feat4Desc: 'High-speed checkout forms that link to Google Sheets, CRM, and WhatsApp instantly, saving you time and money.',
+                feat5Title: 'Seamless Multi-Language',
+                feat5Desc: 'Engage both Moroccan and foreign clients. Instantly toggle between Darija, Classical Arabic, French, and English.',
+                feat6Title: 'No Monthly Hosting Fees',
+                feat6Desc: 'Stop paying $29/mo to hosting services or Shopify. We host your code on ultra-secure cloud platforms with unlimited bandwidth for $0/mo.',
+                calcBadge: '💰 EARNING CALCULATOR',
+                calcTitle: 'How Much More Money Will You Make?',
+                calcSubtitle: 'Most online sellers waste 60%+ of their ad budget on slow pages. See how much our optimized speed and copywriting can increase your daily profits.',
+                calcInputTitle: '📊 Enter Your Business Numbers',
+                calcLblVisitors: 'Daily Traffic (Visitors)',
+                calcValVisitors: '1,500 visitors',
+                calcLblAov: 'Average Product Price (DH)',
+                calcValAov: '250 DH',
+                calcLblCr: 'Current Conversion Rate',
+                calcValCr: '1.2%',
+                calcComparisonBadge: '⚡ COMPARISON SIMULATION',
+                calcLblCurrentRev: 'Current Daily Sales',
+                calcCurrentSales: '4,500 DH',
+                calcCurrentOrders: '18 orders',
+                calcLblSawabRev: 'SAWAB Daily Sales',
+                calcSawabSales: '15,000 DH',
+                calcSawabOrders: '60 orders (at 4% CR)',
+                calcLblExtra: 'Potential Extra Profit Monthly',
+                calcExtraProfit: '+ 315,000 DH',
+                calcFooterDesc: 'Assuming 4% average conversion rate with Sawab custom landing page.',
+                calcCta: '🚀 INCREASE MY REVENUE NOW',
+                priceBadge: '💳 HONEST & TRANSPARENT PRICING',
+                priceTitle: 'Choose Your Success Plan',
+                priceSubtitle: 'No recurring subscriptions or hosting bills. You pay once, and own the code forever. Select a package and customize your features below.',
+                planStarterTitle: 'COD Beginner',
+                planStarterDesc: 'Perfect for testing a single physical product in local e-commerce.',
+                planStarterPrice: '499 DH',
+                planStarterOnce: '/ one-time',
+                planStarterFeat1: '1 Custom-Coded Page',
+                planStarterFeat2: 'Ultra-Fast Loading (0.4s)',
+                planStarterFeat3: 'Responsive Mobile Layout',
+                planStarterFeat4: '1 Pixel Integration (FB/TikTok)',
+                planStarterFeat5: 'COD Order Form setup',
+                planStarterBtn: 'Select Starter Pack',
+                planProTag: 'BEST SELLER',
+                planProTitle: 'E-com Scale Pack',
+                planProDesc: 'For serious e-commerce brands wanting optimized sales copy & multi-pixels.',
+                planProPrice: '899 DH',
+                planProOnce: '/ one-time',
+                planProFeat1: 'Premium Custom Design',
+                planProFeat2: 'Ultra Fast Loading (0.3s)',
+                planProFeat3: 'Professional Darija/FR Copywriting',
+                planProFeat4: 'Multi-Pixel API tracking',
+                planProFeat5: 'Google Sheets Order Integration',
+                planProFeat6: 'Thank You Page + Upsell Form',
+                planProBtn: 'Select Best Seller Pack',
+                planEliteTitle: 'Ultimate Suite',
+                planEliteDesc: 'Complete e-commerce infrastructure with domains, backups & 1-year updates.',
+                planElitePrice: '1,799 DH',
+                planEliteOnce: '/ one-time',
+                planEliteFeat1: 'Multiple Page Funnels',
+                planEliteFeat2: 'Fully Bilingual Page',
+                planEliteFeat3: 'Custom domain (.ma / .com) setup',
+                planEliteFeat4: 'Unlimited Bandwidth Server ($0/mo)',
+                planEliteFeat5: 'Dedicated priority support (1 Year)',
+                planEliteBtn: 'Select Elite Pack',
+                configTitle: '🛠️ Customize Your Order & Fill Details',
+                configSubtitle: 'Toggle premium features to add to your selected plan in real-time. Fill in the details below to complete your checkout order via WhatsApp.',
+                configAddonLbl: 'Select Add-Ons',
+                addonCopyTitle: 'Premium Copywriting',
+                addonCopyDesc: 'Professional copywriting to persuade buyers.',
+                addonSpeedTitle: 'Express 24H Delivery',
+                addonSpeedDesc: 'Prioritize your project in our development queue.',
+                addonDomainTitle: 'Custom Domain Setup (.ma / .com)',
+                addonDomainDesc: 'We register and setup your domain.',
+                addonUpsellTitle: 'Upsell & Multi-Offer Page',
+                addonUpsellDesc: 'High-speed thank you page with upsell triggers.',
+                configFormLbl: 'Checkout Information',
+                formPlanLbl: 'Selected Plan:',
+                formTotalLbl: 'Estimated Total',
+                formTotalPrice: '899 DH',
+                btnSubmitText: 'Order via WhatsApp',
+                lblFullname: 'Full Name *',
+                lblPhone: 'WhatsApp Number *',
+                lblNiche: 'Your Product / Business Niche *',
+                testBadge: '💬 CLIENT REVIEWS',
+                testTitle: 'Trusted By Moroccan E-com Sellers',
+                testSubtitle: 'Check out the genuine reviews from physical product sellers, brand owners, and marketers after switching their slow platform templates to Sawab code.',
+                review1Body: '"I was using Shopify, and my mobile score was 28. CPC was very high because visitors bounce before the page loads. When Sawab custom coded my page, my conversion rate jumped from 1.5% to 4.3%! I save thousands of Dirhams in ad budget!"',
+                review2Body: '"The instant multilingual switch is spectacular. Some Moroccan clients prefer reading in French, others in Arabic/Darija. The layout simulator helped me structure exactly what I wanted. Excellent speed, reliable communication."',
+                review3Body: '"Amazing service. No monthly Shopify or Elementor hosting bills. They created a custom landing page for me hosted for free. The WhatsApp and Google Sheets integration is super smooth, and delivery was in less than 24h!"',
+                faqBadge: '❓ FREQUENT QUESTIONS',
+                faqTitle: 'Got Questions? We Have Answers',
+                faqSubtitle: 'Clear and honest answers to help you understand our design and setup process.',
+                faqQ1: 'What is the hosting cost for my landing page?',
+                faqA1: '$0/month. Because we build using pure HTML, CSS, and JS, we can host your page on high-speed static servers (like GitHub Pages, Vercel, or Netlify) completely free of charge forever. You will never pay monthly builder bills.',
+                faqQ2: 'Do I need my own domain name?',
+                faqA2: 'Yes, you need a domain name (like yourstore.com or yourstore.ma) so that clients can visit your site. If you already have one, we will link it for free. If you don\'t, you can purchase one yourself or choose our custom domain add-on, and we will register and configure it for you.',
+                faqQ3: 'How long does the page creation take?',
+                faqA3: 'Standard delivery is within 48 hours. If you select our "Express 24H Delivery" add-on, we will prioritize your landing page and deliver it fully functional within 24 hours of receiving your product assets and details.',
+                faqQ4: 'How do I receive my orders from the landing page?',
+                faqA4: 'We support multiple integrations. Orders can be configured to submit to a secure Google Sheet file in real-time, redirect to WhatsApp with custom pre-filled message, or trigger webhook emails. This makes COD tracking super easy.',
+                faqQ5: 'What payment methods do you accept?',
+                faqA5: 'We accept direct bank transfers (CIH Bank, Attijariwafa Bank, BCP), international wire transfer (Wise, PayPal, Payoneer), and cryptocurrencies (USDT, BTC). Work starts after payment confirmation.',
+                footerLinksTitle: 'Quick Navigation',
+                footerContactTitle: 'Contact & Support',
+                footerHours: '🕒 Mon - Sat: 9:00 AM - 6:00 PM',
+                footerAdminBtn: 'Owner Dashboard',
+                modalSuccessTitle: 'Order Received Successfully! 🎉',
+                modalSuccessSubtitle: 'Your customized order has been saved locally. We have also opened your WhatsApp to discuss project details directly.',
+                modalFieldName: 'Client Name:',
+                modalFieldPhone: 'Phone Number:',
+                modalFieldPrice: 'Calculated Price:',
+                modalBtnClose: 'Close & Return',
+                adminHeaderTitle: 'SAWAB Leads & CRM Portal',
+                adminLblPin: 'Enter Security Admin PIN',
+                adminPinDesc: 'For testing, use the preset PIN code: 2026',
+                adminBtnVerify: 'Verify Passcode',
+                adminCrmLbl: 'Total Registered Orders:',
+                tblColDate: 'Date',
+                tblColName: 'Name',
+                tblColPhone: 'Phone',
+                tblColNiche: 'Business Niche',
+                tblColPlan: 'Plan',
+                tblColPrice: 'Total Price',
+                tblColActions: 'Actions'
+            }
+        };
+
+        // APPLICATION STATE
+        let state = {
+            currentLang: 'en',
+            selectedPlan: 'pro',
+            totalPrice: 899,
+            pricingAddons: {
+                copywriting: false,
+                express: false,
+                domain: false,
+                upsell: false
+            },
+            simColor: '#FF2A2A',
+            simColorName: 'red',
+            simMode: 'desktop'
+        };
+
+        // BASE PLAN PRICES
+        const planPrices = {
+            starter: 499,
+            pro: 899,
+            elite: 1799
+        };
+
+        // ADDON PRICES
+        const addonPrices = {
+            copywriting: 300,
+            express: 200,
+            domain: 150,
+            upsell: 250
+        };
+
+        // INITIALIZATION
+        window.addEventListener('DOMContentLoaded', () => {
+            // Load language from storage or default to Arabic for local optimization
+            const savedLang = localStorage.getItem('sawab_lang') || 'ar';
+            changeLanguage(savedLang);
+
+            // Initialize speed score animation
+            animateGauge();
+
+            // Setup custom before/after drag slider
+            setupSlider();
+
+            // Setup simulation defaults
+            updateSimPreview();
+
+            // Run initial ROI Calculation
+            calculateROI();
+
+            // Close modal events on escape key
+            window.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    closeSuccessModal();
+                    closeAdminModal();
+                }
+            });
+        });
+
+        // 1. LANGUAGE SWITCH SYSTEM
+        function changeLanguage(lang) {
+            state.currentLang = lang;
+            localStorage.setItem('sawab_lang', lang);
+
+            // Adjust document attributes
+            document.documentElement.lang = lang;
+            const dict = translations[lang];
+            
+            const mainBody = document.getElementById('main-body');
+            mainBody.setAttribute('dir', dict.direction);
+
+            // Update text alignments based on direction
+            if (dict.direction === 'rtl') {
+                document.getElementById('hero-content-wrapper').className = "lg:col-span-7 space-y-8 text-center lg:text-right";
+                document.getElementById('main-body').style.fontFamily = "system-ui, -apple-system, sans-serif";
+            } else {
+                document.getElementById('hero-content-wrapper').className = "lg:col-span-7 space-y-8 text-center lg:text-left";
+                document.getElementById('main-body').style.fontFamily = "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif";
+            }
+
+            // Map all UI translations
+            document.getElementById('announcement-text').innerText = dict.announcement;
+            document.getElementById('logo-subtitle').innerText = dict.logoSub;
+            document.getElementById('footer-logo-sub').innerText = dict.logoSub;
+
+            // Navigation translations
+            document.getElementById('nav-features').innerText = dict.navFeatures;
+            document.getElementById('nav-simulator').innerText = dict.navSimulator;
+            document.getElementById('nav-calculator').innerText = dict.navCalculator;
+            document.getElementById('nav-pricing').innerText = dict.navPricing;
+            document.getElementById('nav-faq').innerText = dict.navFaq;
+            document.getElementById('nav-cta').innerText = dict.navCta;
+
+            // Mobile menu translations
+            document.getElementById('mob-features').innerText = dict.mobFeatures;
+            document.getElementById('mob-simulator').innerText = dict.mobSimulator;
+            document.getElementById('mob-calculator').innerText = dict.mobCalculator;
+            document.getElementById('mob-pricing').innerText = dict.mobPricing;
+            document.getElementById('mob-faq').innerText = dict.mobFaq;
+            document.getElementById('mob-cta').innerText = dict.mobCta;
+
+            // Hero section translations
+            document.getElementById('hero-badge-text').innerText = dict.heroBadge;
+            document.getElementById('hero-title').innerHTML = dict.heroTitle;
+            document.getElementById('hero-subtitle').innerText = dict.heroSubtitle;
+            document.getElementById('hero-stat-speed').innerText = dict.heroStatSpeed;
+            document.getElementById('hero-stat-speed-lbl').innerText = dict.heroStatSpeedLbl;
+            document.getElementById('hero-stat-conversions').innerText = dict.heroStatConversions;
+            document.getElementById('hero-stat-conversions-lbl').innerText = dict.heroStatConversionsLbl;
+            document.getElementById('hero-stat-score-lbl').innerText = dict.heroStatScoreLbl;
+            document.getElementById('hero-cta-primary').querySelector('span').innerText = dict.heroCtaPrimary;
+            document.getElementById('hero-cta-secondary').innerText = dict.heroCtaSecondary;
+            document.getElementById('hero-mockup-url').innerText = dict.heroMockupUrl;
+            document.getElementById('hero-gauge-desc').innerText = dict.heroGaugeDesc;
+
+            // Logs mockup text
+            document.getElementById('log-speed-index').innerText = dict.logSpeedIndex;
+            document.getElementById('log-fcp').innerText = dict.logFcp;
+            document.getElementById('log-weight').innerText = dict.logWeight;
+
+            // Slider translations
+            document.getElementById('slider-title').innerText = dict.sliderTitle;
+            document.getElementById('slider-subtitle').innerText = dict.sliderSubtitle;
+            document.getElementById('slider-tag-before').innerText = dict.sliderTagBefore;
+            document.getElementById('slider-header-before').innerText = dict.sliderHeaderBefore;
+            document.getElementById('slider-col1-lbl').innerText = dict.sliderCol1Lbl;
+            document.getElementById('slider-col2-lbl').innerText = dict.sliderCol2Lbl;
+            document.getElementById('slider-desc-before').innerText = dict.sliderDescBefore;
+            document.getElementById('slider-tag-after').innerText = dict.sliderTagAfter;
+            document.getElementById('slider-header-after').innerText = dict.sliderHeaderAfter;
+            document.getElementById('slider-col3-lbl').innerText = dict.sliderCol3Lbl;
+            document.getElementById('slider-col4-lbl').innerText = dict.sliderCol4Lbl;
+            document.getElementById('slider-desc-after').innerText = dict.sliderDescAfter;
+
+            // Simulator translation
+            document.getElementById('sim-badge').innerText = dict.simBadge;
+            document.getElementById('sim-title').innerText = dict.simTitle;
+            document.getElementById('sim-subtitle').innerText = dict.simSubtitle;
+            document.getElementById('sim-sidebar-title').innerText = dict.simSidebarTitle;
+            document.getElementById('sim-color-lbl').innerText = dict.simColorLbl;
+            document.getElementById('sim-sections-lbl').innerText = dict.simSectionsLbl;
+            document.getElementById('sim-toggle-hero').innerText = dict.simToggleHero;
+            document.getElementById('sim-toggle-proof').innerText = dict.simToggleProof;
+            document.getElementById('sim-toggle-features').innerText = dict.simToggleFeatures;
+            document.getElementById('sim-toggle-reviews').innerText = dict.simToggleReviews;
+            document.getElementById('sim-toggle-order').innerText = dict.simToggleOrder;
+            document.getElementById('sim-preset-lbl').innerText = dict.simPresetLbl;
+            document.getElementById('sim-preset-cod').innerText = dict.simPresetCod;
+            document.getElementById('sim-preset-lead').innerText = dict.simPresetLead;
+            document.getElementById('sim-order-btn').innerText = dict.simOrderBtn;
+            document.getElementById('sim-preview-lbl').innerText = dict.simPreviewLbl;
+            document.getElementById('sim-lbl-desktop').innerText = dict.simModeDesktop;
+            document.getElementById('sim-lbl-mobile').innerText = dict.simModeMobile;
+
+            // Inside simulator translations
+            document.getElementById('sim-inner-tag').innerText = dict.simInnerTag;
+            document.getElementById('sim-inner-title').innerText = dict.simInnerTitle;
+            document.getElementById('sim-inner-subtitle').innerText = dict.simInnerSubtitle;
+            document.getElementById('sim-inner-cta').innerText = dict.simInnerCta;
+            document.getElementById('sim-inner-features-title').innerText = dict.simInnerFeaturesTitle;
+            document.getElementById('sim-inner-feat1-title').innerText = dict.simInnerFeat1Title;
+            document.getElementById('sim-inner-feat1-desc').innerText = dict.simInnerFeat1Desc;
+            document.getElementById('sim-inner-feat2-title').innerText = dict.simInnerFeat2Title;
+            document.getElementById('sim-inner-feat2-desc').innerText = dict.simInnerFeat2Desc;
+            document.getElementById('sim-inner-review-text').innerText = dict.simInnerReviewText;
+            document.getElementById('sim-inner-review-author').innerText = dict.simInnerReviewAuthor;
+            document.getElementById('sim-inner-form-badge').innerText = dict.simInnerFormBadge;
+            document.getElementById('sim-inner-form-title').innerText = dict.simInnerFormTitle;
+            document.getElementById('sim-inner-lbl-name').innerText = dict.simInnerLblName;
+            document.getElementById('sim-inner-lbl-phone').innerText = dict.simInnerLblPhone;
+            document.getElementById('sim-inner-form-btn').innerText = dict.simInnerFormBtn;
+
+            // Features translation
+            document.getElementById('feat-badge').innerText = dict.featBadge;
+            document.getElementById('feat-title').innerText = dict.featTitle;
+            document.getElementById('feat-subtitle').innerText = dict.featSubtitle;
+            document.getElementById('feat1-title').innerText = dict.feat1Title;
+            document.getElementById('feat1-desc').innerText = dict.feat1Desc;
+            document.getElementById('feat2-title').innerText = dict.feat2Title;
+            document.getElementById('feat2-desc').innerText = dict.feat2Desc;
+            document.getElementById('feat3-title').innerText = dict.feat3Title;
+            document.getElementById('feat3-desc').innerText = dict.feat3Desc;
+            document.getElementById('feat4-title').innerText = dict.feat4Title;
+            document.getElementById('feat4-desc').innerText = dict.feat4Desc;
+            document.getElementById('feat5-title').innerText = dict.feat5Title;
+            document.getElementById('feat5-desc').innerText = dict.feat5Desc;
+            document.getElementById('feat6-title').innerText = dict.feat6Title;
+            document.getElementById('feat6-desc').innerText = dict.feat6Desc;
+
+            // Calculator translation
+            document.getElementById('calc-badge').innerText = dict.calcBadge;
+            document.getElementById('calc-title').innerText = dict.calcTitle;
+            document.getElementById('calc-subtitle').innerText = dict.calcSubtitle;
+            document.getElementById('calc-input-title').innerText = dict.calcInputTitle;
+            document.getElementById('calc-lbl-visitors').innerText = dict.calcLblVisitors;
+            document.getElementById('calc-lbl-aov').innerText = dict.calcLblAov;
+            document.getElementById('calc-lbl-cr').innerText = dict.calcLblCr;
+            document.getElementById('calc-comparison-badge').innerText = dict.calcComparisonBadge;
+            document.getElementById('calc-lbl-current-rev').innerText = dict.calcLblCurrentRev;
+            document.getElementById('calc-lbl-sawab-rev').innerText = dict.calcLblSawabRev;
+            document.getElementById('calc-lbl-extra').innerText = dict.calcLblExtra;
+            document.getElementById('calc-footer-desc').innerText = dict.calcFooterDesc;
+            document.getElementById('calc-cta').innerText = dict.calcCta;
+
+            // Pricing translation
+            document.getElementById('price-badge').innerText = dict.priceBadge;
+            document.getElementById('price-title').innerText = dict.priceTitle;
+            document.getElementById('price-subtitle').innerText = dict.priceSubtitle;
+
+            // Plans
+            document.getElementById('plan-starter-title').innerText = dict.planStarterTitle;
+            document.getElementById('plan-starter-desc').innerText = dict.planStarterDesc;
+            document.getElementById('plan-starter-price').innerText = dict.planStarterPrice;
+            document.getElementById('plan-starter-once').innerText = dict.planStarterOnce;
+            document.getElementById('plan-starter-feat1').innerText = dict.planStarterFeat1;
+            document.getElementById('plan-starter-feat2').innerText = dict.planStarterFeat2;
+            document.getElementById('plan-starter-feat3').innerText = dict.planStarterFeat3;
+            document.getElementById('plan-starter-feat4').innerText = dict.planStarterFeat4;
+            document.getElementById('plan-starter-feat5').innerText = dict.planStarterFeat5;
+            document.getElementById('plan-starter-btn').innerText = dict.planStarterBtn;
+
+            document.getElementById('plan-pro-tag').innerText = dict.planProTag;
+            document.getElementById('plan-pro-title').innerText = dict.planProTitle;
+            document.getElementById('plan-pro-desc').innerText = dict.planProDesc;
+            document.getElementById('plan-pro-price').innerText = dict.planProPrice;
+            document.getElementById('plan-pro-once').innerText = dict.planProOnce;
+            document.getElementById('plan-pro-feat1').innerText = dict.planProFeat1;
+            document.getElementById('plan-pro-feat2').innerText = dict.planProFeat2;
+            document.getElementById('plan-pro-feat3').innerText = dict.planProFeat3;
+            document.getElementById('plan-pro-feat4').innerText = dict.planProFeat4;
+            document.getElementById('plan-pro-feat5').innerText = dict.planProFeat5;
+            document.getElementById('plan-pro-feat6').innerText = dict.planProFeat6;
+            document.getElementById('plan-pro-btn').innerText = dict.planProBtn;
+
+            document.getElementById('plan-elite-title').innerText = dict.planEliteTitle;
+            document.getElementById('plan-elite-desc').innerText = dict.planEliteDesc;
+            document.getElementById('plan-elite-price').innerText = dict.planElitePrice;
+            document.getElementById('plan-elite-once').innerText = dict.planEliteOnce;
+            document.getElementById('plan-elite-feat1').innerText = dict.planEliteFeat1;
+            document.getElementById('plan-elite-feat2').innerText = dict.planEliteFeat2;
+            document.getElementById('plan-elite-feat3').innerText = dict.planEliteFeat3;
+            document.getElementById('plan-elite-feat4').innerText = dict.planEliteFeat4;
+            document.getElementById('plan-elite-feat5').innerText = dict.planEliteFeat5;
+            document.getElementById('plan-elite-btn').innerText = dict.planEliteBtn;
+
+            // Custom form configuration translations
+            document.getElementById('config-title').innerText = dict.configTitle;
+            document.getElementById('config-subtitle').innerText = dict.configSubtitle;
+            document.getElementById('config-addon-lbl').innerText = dict.configAddonLbl;
+            document.getElementById('addon-copy-title').innerText = dict.addonCopyTitle;
+            document.getElementById('addon-copy-desc').innerText = dict.addonCopyDesc;
+            document.getElementById('addon-speed-title').innerText = dict.addonSpeedTitle;
+            document.getElementById('addon-speed-desc').innerText = dict.addonSpeedDesc;
+            document.getElementById('addon-domain-title').innerText = dict.addonDomainTitle;
+            document.getElementById('addon-domain-desc').innerText = dict.addonDomainDesc;
+            document.getElementById('addon-upsell-title').innerText = dict.addonUpsellTitle;
+            document.getElementById('addon-upsell-desc').innerText = dict.addonUpsellDesc;
+            document.getElementById('config-form-lbl').innerText = dict.configFormLbl;
+            document.getElementById('form-plan-lbl').innerText = dict.formPlanLbl;
+            document.getElementById('form-total-lbl').innerText = dict.formTotalLbl;
+            document.getElementById('btn-submit-text').innerText = dict.btnSubmitText;
+            document.getElementById('lbl-fullname').innerText = dict.lblFullname;
+            document.getElementById('lbl-phone').innerText = dict.lblPhone;
+            document.getElementById('lbl-niche').innerText = dict.lblNiche;
+
+            // Testimonials
+            document.getElementById('test-badge').innerText = dict.testBadge;
+            document.getElementById('test-title').innerText = dict.testTitle;
+            document.getElementById('test-subtitle').innerText = dict.testSubtitle;
+            document.getElementById('review1-body').innerText = dict.review1Body;
+            document.getElementById('review2-body').innerText = dict.review2Body;
+            document.getElementById('review3-body').innerText = dict.review3Body;
+
+            // FAQ translation
+            document.getElementById('faq-badge').innerText = dict.faqBadge;
+            document.getElementById('faq-title').innerText = dict.faqTitle;
+            document.getElementById('faq-subtitle').innerText = dict.faqSubtitle;
+            document.getElementById('faq-q1').innerText = dict.faqQ1;
+            document.getElementById('faq-q2').innerText = dict.faqQ2;
+            document.getElementById('faq-q3').innerText = dict.faqQ3;
+            document.getElementById('faq-q4').innerText = dict.faqQ4;
+            document.getElementById('faq-q5').innerText = dict.faqQ5;
+            document.getElementById('faq-a1').innerText = dict.faqA1;
+            document.getElementById('faq-a2').innerText = dict.faqA2;
+            document.getElementById('faq-a3').innerText = dict.faqA3;
+            document.getElementById('faq-a4').innerText = dict.faqA4;
+            document.getElementById('faq-a5').innerText = dict.faqA5;
+
+            // Footer / admin translations
+            document.getElementById('footer-links-title').innerText = dict.footerLinksTitle;
+            document.getElementById('footer-contact-title').innerText = dict.footerContactTitle;
+            document.getElementById('footer-hours').innerText = dict.footerHours;
+            document.getElementById('footer-admin-btn').innerText = dict.footerAdminBtn;
+            document.getElementById('footer-desc').innerText = dict.footerDesc;
+            document.getElementById('footer-features').innerText = dict.navFeatures;
+            document.getElementById('footer-simulator').innerText = dict.navSimulator;
+            document.getElementById('footer-calculator').innerText = dict.navCalculator;
+            document.getElementById('footer-pricing').innerText = dict.navPricing;
+
+            // Success Modal mapping
+            document.getElementById('modal-success-title').innerText = dict.modalSuccessTitle;
+            document.getElementById('modal-success-subtitle').innerText = dict.modalSuccessSubtitle;
+            document.getElementById('modal-field-name').innerText = dict.modalFieldName;
+            document.getElementById('modal-field-phone').innerText = dict.modalFieldPhone;
+            document.getElementById('modal-field-price').innerText = dict.modalFieldPrice;
+            document.getElementById('modal-btn-close').innerText = dict.modalBtnClose;
+
+            // Admin translation elements
+            document.getElementById('admin-header-title').innerText = dict.adminHeaderTitle;
+            document.getElementById('admin-lbl-pin').innerText = dict.adminLblPin;
+            document.getElementById('admin-pin-desc').innerHTML = dict.adminPinDesc;
+            document.getElementById('admin-btn-verify').innerText = dict.adminBtnVerify;
+            document.getElementById('admin-crm-lbl').innerText = dict.adminCrmLbl;
+            document.getElementById('tbl-col-date').innerText = dict.tblColDate;
+            document.getElementById('tbl-col-name').innerText = dict.tblColName;
+            document.getElementById('tbl-col-phone').innerText = dict.tblColPhone;
+            document.getElementById('tbl-col-niche').innerText = dict.tblColNiche;
+            document.getElementById('tbl-col-plan').innerText = dict.tblColPlan;
+            document.getElementById('tbl-col-price').innerText = dict.tblColPrice;
+            document.getElementById('tbl-col-actions').innerText = dict.tblColActions;
+
+            // Toggle visual styling of active language button
+            ['ar', 'fr', 'en'].forEach(l => {
+                const btn = document.getElementById(`lang-${l}-btn`);
+                if (l === lang) {
+                    btn.className = "px-2.5 py-1 rounded-full bg-brand-red text-white transition-all-300 font-extrabold";
+                } else {
+                    btn.className = "px-2.5 py-1 rounded-full text-zinc-400 hover:text-white transition-all-300";
+                }
+            });
+
+            // Update plan prices on visual outputs
+            updatePlanSelectorUI();
+            updateTotalPrice();
+            calculateROI();
+        }
+
+        // 2. GAUGE ANIMATION SYSTEM
+        function animateGauge() {
+            const circle = document.getElementById('gauge-circle');
+            const scoreNum = document.getElementById('live-speed-score');
+            
+            // Randomly pulsate speed stats a bit for realism
+            setInterval(() => {
+                const randomScore = Math.floor(Math.random() * 2) + 98; // Keeps it 98 or 99
+                scoreNum.innerText = randomScore;
+                
+                // Adjust circular SVG dashoffset
+                const maxDash = 440;
+                const offset = maxDash - (maxDash * randomScore) / 100;
+                circle.style.strokeDashoffset = offset;
+            }, 3000);
+        }
+
+        // 3. BEFORE / AFTER DRAG SLIDER SYSTEM
+        function setupSlider() {
+            const handle = document.getElementById('slider-handle');
+            const afterContainer = document.getElementById('slider-after-container');
+            const sliderWrapper = handle.parentElement;
+
+            let isDragging = false;
+
+            const handleMove = (clientX) => {
+                const rect = sliderWrapper.getBoundingClientRect();
+                const offsetX = clientX - rect.left;
+                let percentage = (offsetX / rect.width) * 100;
+
+                // Restrict percentage between 0 and 100
+                if (percentage < 2) percentage = 2;
+                if (percentage > 98) percentage = 98;
+
+                handle.style.left = `${percentage}%`;
+                afterContainer.style.width = `${percentage}%`;
+            };
+
+            // Mouse Events
+            handle.addEventListener('mousedown', () => isDragging = true);
+            window.addEventListener('mouseup', () => isDragging = false);
+            window.addEventListener('mousemove', (e) => {
+                if (!isDragging) return;
+                handleMove(e.clientX);
+            });
+
+            // Touch Events (Mobile)
+            handle.addEventListener('touchstart', () => isDragging = true);
+            window.addEventListener('touchend', () => isDragging = false);
+            window.addEventListener('touchmove', (e) => {
+                if (!isDragging) return;
+                handleMove(e.touches[0].clientX);
+            });
+        }
+
+        // 4. LIVE SIMULATOR SYSTEM
+        function updateSimPreview() {
+            // Toggles
+            const showHero = document.getElementById('sim-cb-hero').checked;
+            const showProof = document.getElementById('sim-cb-proof').checked;
+            const showFeatures = document.getElementById('sim-cb-features').checked;
+            const showReviews = document.getElementById('sim-cb-reviews').checked;
+            const showOrder = document.getElementById('sim-cb-order').checked;
+
+            document.getElementById('sim-preview-hero').style.display = showHero ? 'block' : 'none';
+            document.getElementById('sim-preview-proof').style.display = showProof ? 'block' : 'none';
+            document.getElementById('sim-preview-features').style.display = showFeatures ? 'block' : 'none';
+            document.getElementById('sim-preview-reviews').style.display = showReviews ? 'block' : 'none';
+            document.getElementById('sim-preview-order').style.display = showOrder ? 'block' : 'none';
+        }
+
+        function changeSimColor(hexColor, colorName) {
+            state.simColor = hexColor;
+            state.simColorName = colorName;
+
+            // Apply color classes or styles inside simulation Frame
+            const accentsBg = document.querySelectorAll('.sim-accent-bg');
+            accentsBg.forEach(el => {
+                el.style.backgroundColor = hexColor;
+            });
+
+            const accentsText = document.querySelectorAll('.sim-accent-text');
+            accentsText.forEach(el => {
+                el.style.color = hexColor;
+            });
+
+            // Adjust button ring highlight to represent selected color
+            ['red', 'blue', 'green', 'orange'].forEach(c => {
+                const btn = document.getElementById(`sim-color-${c}`);
+                if (c === colorName) {
+                    btn.style.transform = "scale(1.2)";
+                    btn.style.borderColor = "#ffffff";
+                    btn.style.boxShadow = `0 0 10px ${hexColor}`;
+                } else {
+                    btn.style.transform = "scale(1)";
+                    btn.style.borderColor = "#121212";
+                    btn.style.boxShadow = "none";
+                }
+            });
+        }
+
+        function applySimPreset(presetType) {
+            if (presetType === 'cod') {
+                document.getElementById('sim-cb-hero').checked = true;
+                document.getElementById('sim-cb-proof').checked = true;
+                document.getElementById('sim-cb-features').checked = true;
+                document.getElementById('sim-cb-reviews').checked = true;
+                document.getElementById('sim-cb-order').checked = true;
+                changeSimColor('#FF2A2A', 'red');
+            } else if (presetType === 'lead') {
+                document.getElementById('sim-cb-hero').checked = true;
+                document.getElementById('sim-cb-proof').checked = false;
+                document.getElementById('sim-cb-features').checked = true;
+                document.getElementById('sim-cb-reviews').checked = false;
+                document.getElementById('sim-cb-order').checked = true;
+                changeSimColor('#2563EB', 'blue');
+            }
+            updateSimPreview();
+        }
+
+        function changePreviewMode(mode) {
+            state.simMode = mode;
+            const frame = document.getElementById('sim-frame');
+            
+            const btnDesktop = document.getElementById('sim-mode-desktop');
+            const btnMobile = document.getElementById('sim-mode-mobile');
+
+            if (mode === 'mobile') {
+                frame.style.maxWidth = '375px';
+                btnMobile.className = "bg-brand-red text-white py-1 px-3 rounded-lg font-bold flex items-center gap-1.5 transition-all-300";
+                btnDesktop.className = "bg-zinc-950 border border-white/10 text-zinc-400 hover:text-white py-1 px-3 rounded-lg font-bold flex items-center gap-1.5 transition-all-300";
+            } else {
+                frame.style.maxWidth = '100%';
+                btnDesktop.className = "bg-brand-red text-white py-1 px-3 rounded-lg font-bold flex items-center gap-1.5 transition-all-300";
+                btnMobile.className = "bg-zinc-950 border border-white/10 text-zinc-400 hover:text-white py-1 px-3 rounded-lg font-bold flex items-center gap-1.5 transition-all-300";
+            }
+        }
+
+        function orderThisSimulatedLayout() {
+            // Apply plan & auto check some add-ons depending on what they picked in simulator
+            selectPlan('pro'); // Best seller contains features
+            
+            // Auto check writing addon if they checked reviews & features
+            if (document.getElementById('sim-cb-features').checked) {
+                document.getElementById('addon-copy').checked = true;
+            }
+
+            // Scroll down directly to pricing/checkout area with animations
+            document.getElementById('pricing').scrollIntoView({ behavior: 'smooth' });
+            
+            // Highlight checkout form visually for a few seconds
+            const checkoutWrapper = document.getElementById('form-name').parentElement.parentElement;
+            checkoutWrapper.classList.add('ring-2', 'ring-brand-red', 'glow-red');
+            setTimeout(() => {
+                checkoutWrapper.classList.remove('ring-2', 'ring-brand-red', 'glow-red');
+            }, 3000);
+
+            updateTotalPrice();
+        }
+
+        // 5. ROI CALCULATOR MATHS
+        function calculateROI() {
+            const visitors = parseInt(document.getElementById('input-visitors').value);
+            const aov = parseInt(document.getElementById('input-aov').value);
+            const currentCR = parseFloat(document.getElementById('input-cr').value);
+
+            // Update visual slider tags
+            const visitorSuffix = state.currentLang === 'ar' ? ' زائر' : ' visitors';
+            const priceSuffix = state.currentLang === 'ar' ? ' درهم' : ' DH';
+            const orderSuffix = state.currentLang === 'ar' ? ' طلبية' : ' orders';
+
+            document.getElementById('calc-val-visitors').innerText = visitors.toLocaleString() + visitorSuffix;
+            document.getElementById('calc-val-aov').innerText = aov.toLocaleString() + priceSuffix;
+            document.getElementById('calc-val-cr').innerText = currentCR + '%';
+
+            // Current setup revenue
+            const currentOrders = Math.round(visitors * (currentCR / 100));
+            const currentRev = currentOrders * aov;
+
+            // Sawab setup revenue (we guarantee minimum 4% conversions or extra speed benefit)
+            const sawabCR = Math.max(4.0, currentCR * 2.5); // At least 4.0%, or 2.5x their current conversion
+            const sawabOrders = Math.round(visitors * (sawabCR / 100));
+            const sawabRev = sawabOrders * aov;
+
+            // Monthly increase
+            const extraDaily = sawabRev - currentRev;
+            const extraMonthly = extraDaily * 30;
+
+            // Map values to outputs
+            document.getElementById('res-current-sales').innerText = currentRev.toLocaleString() + priceSuffix;
+            document.getElementById('res-current-orders').innerText = currentOrders + ' ' + orderSuffix;
+
+            document.getElementById('res-sawab-sales').innerText = sawabRev.toLocaleString() + priceSuffix;
+            document.getElementById('res-sawab-orders').innerText = `${sawabOrders} ${orderSuffix} (at ${sawabCR.toFixed(1)}% CR)`;
+
+            document.getElementById('res-extra-profit').innerText = '+ ' + extraMonthly.toLocaleString() + priceSuffix;
+        }
+
+        // 6. PRICING SELECTION & CALCULATOR
+        function selectPlan(plan) {
+            state.selectedPlan = plan;
+            
+            // Adjust CSS highlight borders on plan cards
+            const plans = ['starter', 'pro', 'elite'];
+            plans.forEach(p => {
+                const card = document.getElementById(`plan-${p}-card`);
+                const btn = document.getElementById(`plan-${p}-btn`);
+                
+                if (p === plan) {
+                    card.className = "bg-zinc-900 border-2 border-brand-red rounded-2xl p-8 relative flex flex-col justify-between transition-all-300 glow-red transform lg:-translate-y-2";
+                    btn.className = "w-full mt-8 bg-brand-red hover:bg-brand-darkRed text-white font-black py-3.5 px-4 rounded-xl text-xs tracking-wider transition-all-300 shadow-lg shadow-brand-red/20";
+                } else {
+                    card.className = "bg-zinc-900 border border-white/5 hover:border-white/10 rounded-2xl p-8 relative flex flex-col justify-between transition-all-300";
+                    btn.className = "w-full mt-8 bg-zinc-950 border border-white/10 hover:border-brand-red text-zinc-200 font-bold py-3.5 px-4 rounded-xl text-xs tracking-wider transition-all-300";
+                }
+            });
+
+            updatePlanSelectorUI();
+            updateTotalPrice();
+        }
+
+        function updatePlanSelectorUI() {
+            const pName = state.selectedPlan === 'starter' ? 'STARTER' : state.selectedPlan === 'pro' ? 'PROFESSIONAL' : 'ELITE';
+            const price = planPrices[state.selectedPlan];
+            
+            document.getElementById('form-selected-plan').innerText = `${pName} (${price} DH)`;
+        }
+
+        function updateTotalPrice() {
+            let total = planPrices[state.selectedPlan];
+
+            // Add-ons
+            const hasCopy = document.getElementById('addon-copy').checked;
+            const hasSpeed = document.getElementById('addon-speed').checked;
+            const hasDomain = document.getElementById('addon-domain').checked;
+            const hasUpsell = document.getElementById('addon-upsell').checked;
+
+            state.pricingAddons.copywriting = hasCopy;
+            state.pricingAddons.express = hasSpeed;
+            state.pricingAddons.domain = hasDomain;
+            state.pricingAddons.upsell = hasUpsell;
+
+            if (hasCopy) total += addonPrices.copywriting;
+            if (hasSpeed) total += addonPrices.express;
+            if (hasDomain) total += addonPrices.domain;
+            if (hasUpsell) total += addonPrices.upsell;
+
+            state.totalPrice = total;
+
+            const suffix = state.currentLang === 'ar' ? ' درهم' : ' DH';
+            document.getElementById('form-total-price').innerText = total.toLocaleString() + suffix;
+        }
+
+        // 7. FORM SUBMISSION (CASH ON DELIVERY STYLE TO LOCAL STORAGE & WHATSAPP REDIRECT)
+        function handleFormSubmit(event) {
+            event.preventDefault();
+
+            const clientName = document.getElementById('form-name').value.trim();
+            const clientPhone = document.getElementById('form-phone').value.trim();
+            const clientNiche = document.getElementById('form-niche').value.trim();
+
+            if (!clientName || !clientPhone || !clientNiche) {
+                alert('Please fill all required fields / الرجاء ملء جميع الخانات المطلوبة');
+                return;
+            }
+
+            // Save lead details locally in localStorage for Admin CRM Panel
+            const leads = JSON.parse(localStorage.getItem('sawab_leads') || '[]');
+            const newLead = {
+                id: Date.now(),
+                date: new Date().toLocaleDateString() + ' ' + new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+                name: clientName,
+                phone: clientPhone,
+                niche: clientNiche,
+                plan: state.selectedPlan.toUpperCase(),
+                totalPrice: state.totalPrice,
+                addons: Object.keys(state.pricingAddons).filter(k => state.pricingAddons[k]).join(', ') || 'None'
+            };
+
+            leads.push(newLead);
+            localStorage.setItem('sawab_leads', JSON.stringify(leads));
+
+            // Setup and trigger WhatsApp Link with premium formatting message
+            let waText = `*⚡ NEW SAWAB LANDING PAGE ORDER ⚡*\n\n`;
+            waText += `*Name:* ${clientName}\n`;
+            waText += `*WhatsApp:* ${clientPhone}\n`;
+            waText += `*Business Niche:* ${clientNiche}\n\n`;
+            waText += `*Selected Package:* ${state.selectedPlan.toUpperCase()} (${planPrices[state.selectedPlan]} DH)\n`;
+            waText += `*Add-ons requested:* ${newLead.addons}\n`;
+            waText += `*───────────────────*\n`;
+            waText += `*ESTIMATED TOTAL:* ${state.totalPrice} DH\n\n`;
+            waText += `Hello Sawab Team, I would like to confirm my order and discuss the launch of my high-converting landing page. Let's start!`;
+
+            const encodedText = encodeURIComponent(waText);
+            const waPhone = "212600000000"; // Replace with actual business WhatsApp number if deployed
+            const waUrl = `https://wa.me/${waPhone}?text=${encodedText}`;
+
+            // Map variables inside Success Modal
+            document.getElementById('modal-val-name').innerText = clientName;
+            document.getElementById('modal-val-phone').innerText = clientPhone;
+            document.getElementById('modal-val-price').innerText = `${state.totalPrice} DH`;
+            document.getElementById('modal-whatsapp-direct').href = waUrl;
+
+            // Trigger Success Modal
+            document.getElementById('success-modal').classList.remove('hidden');
+
+            // Reset form fields
+            document.getElementById('form-name').value = '';
+            document.getElementById('form-phone').value = '';
+            document.getElementById('form-niche').value = '';
+
+            // Redirect client to WhatsApp in a new tab immediately after modal renders
+            setTimeout(() => {
+                window.open(waUrl, '_blank');
+            }, 800);
+        }
+
+        function closeSuccessModal() {
+            document.getElementById('success-modal').classList.add('hidden');
+        }
+
+        // 8. ACCORDION FAQ CONTROLLERS
+        function toggleFAQ(id) {
+            const content = document.getElementById(`faq-a-${id}`);
+            const icon = document.getElementById(`faq-icon-${id}`);
+
+            if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+                content.style.maxHeight = '0px';
+                icon.innerText = '+';
+                icon.style.transform = 'rotate(0deg)';
+            } else {
+                // Close other accordions first
+                for (let i = 1; i <= 5; i++) {
+                    document.getElementById(`faq-a-${i}`).style.maxHeight = '0px';
+                    document.getElementById(`faq-icon-${i}`).innerText = '+';
+                    document.getElementById(`faq-icon-${i}`).style.transform = 'rotate(0deg)';
+                }
+
+                // Open current
+                content.style.maxHeight = content.scrollHeight + 'px';
+                icon.innerText = '−';
+                icon.style.transform = 'rotate(180deg)';
+            }
+        }
+
+        // 9. NAVBAR MOBILE COLLAPSE TABS
+        function toggleMobileMenu() {
+            const mobMenu = document.getElementById('mobile-menu');
+            const openIcon = document.getElementById('menu-icon-open');
+            const closeIcon = document.getElementById('menu-icon-close');
+
+            if (mobMenu.classList.contains('hidden')) {
+                mobMenu.classList.remove('hidden');
+                openIcon.classList.add('hidden');
+                closeIcon.classList.remove('hidden');
+            } else {
+                mobMenu.classList.add('hidden');
+                openIcon.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
+            }
+        }
+
+        // 10. OWNERS SECURE LEADS DATABASE (LOCAL CRM PORTAL)
+        function openAdminModal() {
+            document.getElementById('admin-modal').classList.remove('hidden');
+            document.getElementById('admin-passcode-screen').classList.remove('hidden');
+            document.getElementById('admin-leads-screen').classList.add('hidden');
+            document.getElementById('admin-pin-input').value = '';
+            document.getElementById('admin-pin-input').focus();
+        }
+
+        function closeAdminModal() {
+            document.getElementById('admin-modal').classList.add('hidden');
+        }
+
+        function checkAdminPasscode() {
+            const input = document.getElementById('admin-pin-input').value.trim();
+            if (input === '2026') {
+                document.getElementById('admin-passcode-screen').classList.add('hidden');
+                document.getElementById('admin-leads-screen').classList.remove('hidden');
+                renderAdminLeads();
+            } else {
+                alert('Wrong passcode PIN! Please try again. / الرمز السري خاطئ، يرجى إعادة المحاولة.');
+            }
+        }
+
+        function renderAdminLeads() {
+            const leads = JSON.parse(localStorage.getItem('sawab_leads') || '[]');
+            const tbody = document.getElementById('admin-leads-tbody');
+            document.getElementById('admin-count-badge').innerText = leads.length;
+
+            tbody.innerHTML = '';
+
+            if (leads.length === 0) {
+                tbody.innerHTML = `
+                    <tr>
+                        <td colspan="7" class="p-8 text-center text-zinc-500 font-bold italic">
+                            No orders received yet. Launch your page and wait for traffic!
+                        </td>
+                    </tr>
+                `;
+                return;
+            }
+
+            // Render leads starting from newest
+            leads.reverse().forEach(lead => {
+                const tr = document.createElement('tr');
+                tr.className = "hover:bg-white/5 border-b border-white/5 transition-all-300";
+                
+                // Formulate customized text string for WhatsApp links inside table actions
+                const textMessage = encodeURIComponent(`Hello ${lead.name}, thank you for ordering the SAWAB ${lead.plan} Pack. Let's coordinate details!`);
+                const waChatLink = `https://wa.me/${lead.phone.replace(/[\s\+]/g, '')}?text=${textMessage}`;
+
+                tr.innerHTML = `
+                    <td class="p-4 font-mono text-[10px] text-zinc-500">${lead.date}</td>
+                    <td class="p-4 font-bold text-white">${lead.name}</td>
+                    <td class="p-4 font-semibold text-zinc-300 font-mono">${lead.phone}</td>
+                    <td class="p-4 text-xs text-zinc-400">${lead.niche}</td>
+                    <td class="p-4"><span class="bg-brand-red/10 border border-brand-red/20 text-brand-red font-bold text-[9px] px-2 py-0.5 rounded-full uppercase">${lead.plan}</span></td>
+                    <td class="p-4 font-extrabold text-white text-right">${lead.totalPrice} DH</td>
+                    <td class="p-4 text-center flex items-center justify-center gap-2">
+                        <a href="${waChatLink}" target="_blank" class="bg-zinc-900 border border-emerald-500/30 hover:bg-emerald-600 text-emerald-400 hover:text-white px-2 py-1 rounded text-[10px] transition-all-300" title="Chat on WhatsApp">
+                            💬 Chat
+                        </a>
+                        <button onclick="deleteLead(${lead.id})" class="bg-zinc-900 border border-brand-red/30 hover:bg-brand-red text-brand-red hover:text-white px-2 py-1 rounded text-[10px] transition-all-300" title="Delete">
+                            🗑️
+                        </button>
+                    </td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        function deleteLead(id) {
+            if (confirm('Are you sure you want to delete this lead?')) {
+                let leads = JSON.parse(localStorage.getItem('sawab_leads') || '[]');
+                leads = leads.filter(l => l.id !== id);
+                localStorage.setItem('sawab_leads', JSON.stringify(leads));
+                renderAdminLeads();
+            }
+        }
+
+        function clearAllLeads() {
+            if (confirm('⚠️ WARNING: This will permanently wipe out all registered leads inside this browser. Continue?')) {
+                localStorage.removeItem('sawab_leads');
+                renderAdminLeads();
+            }
+        }
+
+        function exportLeadsCSV() {
+            const leads = JSON.parse(localStorage.getItem('sawab_leads') || '[]');
+            if (leads.length === 0) {
+                alert('No leads available to export!');
+                return;
+            }
+
+            let csvContent = "data:text/csv;charset=utf-8,";
+            csvContent += "ID,Date,Name,Phone,Business Niche,Plan,TotalPrice,Addons\n";
+
+            leads.forEach(lead => {
+                // Escape commas to avoid broken rows
+                const row = [
+                    lead.id,
+                    `"${lead.date}"`,
+                    `"${lead.name.replace(/"/g, '""')}"`,
+                    `"${lead.phone}"`,
+                    `"${lead.niche.replace(/"/g, '""')}"`,
+                    lead.plan,
+                    lead.totalPrice,
+                    `"${lead.addons}"`
+                ].join(",");
+                csvContent += row + "\n";
+            });
+
+            const encodedUri = encodeURI(csvContent);
+            const link = document.createElement("a");
+            link.setAttribute("href", encodedUri);
+            link.setAttribute("download", `sawab_leads_export_${Date.now()}.csv`);
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+</body>
+</html>
